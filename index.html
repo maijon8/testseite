@@ -254,13 +254,8 @@
           </dl>
         </div>
 
-        <!-- Versand über Formspree. FORMULAR-ID: "DEINE_FORM_ID" durch die ID aus dem Formspree-Dashboard ersetzen -->
-        <form class="contact-form" action="https://formspree.io/f/DEINE_FORM_ID" method="post" novalidate data-contact-form>
-          <input type="hidden" name="_subject" value="Neue Anfrage über Saarflow – Erstgespräch">
-          <div class="hp" aria-hidden="true">
-            <label for="_gotcha">Bitte freilassen</label>
-            <input id="_gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
-          </div>
+        <!-- Formular öffnet das E-Mail-Programm des Besuchers (mailto). Empfänger: data-mailto (PLATZHALTER) -->
+        <form class="contact-form" action="mailto:hallo@saarflow.example" method="post" enctype="text/plain" novalidate data-contact-form data-mailto="hallo@saarflow.example">
           <div class="field">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required>
@@ -277,12 +272,8 @@
             <label for="nachricht">Worum geht es? <span class="optional">(optional)</span></label>
             <textarea id="nachricht" name="nachricht" rows="4" placeholder="z. B. Wir haben noch keine Website / unsere ist veraltet"></textarea>
           </div>
-          <div class="field field-check">
-            <input id="datenschutz" name="datenschutz" type="checkbox" value="ja" required>
-            <label for="datenschutz">Ich bin einverstanden, dass meine Angaben zur Beantwortung meiner Anfrage verarbeitet werden. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</label>
-          </div>
-          <button class="btn btn-light" type="submit">Erstgespräch anfragen</button>
-          <p class="form-hint">Wir melden uns innerhalb von <mark class="ph ph--dark">[2]</mark> Werktagen.</p>
+          <button class="btn btn-light" type="submit">Anfrage als E-Mail öffnen</button>
+          <p class="form-hint">Ihr E-Mail-Programm öffnet sich mit einer vorbereiteten Nachricht, die Sie vor dem Senden noch prüfen können. Über diese Website werden keine Daten übertragen.</p>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>

@@ -45,61 +45,56 @@
     items.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  // Kontaktformular – Versand über Formspree (action-Attribut im HTML)
+  // Kontaktformular – öffnet das E-Mail-Programm mit vorausgefüllter Nachricht (mailto)
   var form = document.querySelector('[data-contact-form]');
   if (form) {
     var status = form.querySelector('.form-status');
-    var button = form.querySelector('button[type="submit"]');
-    var buttonLabel = button.textContent;
-    var fallback = 'Bitte versuchen Sie es später erneut oder schreiben Sie uns direkt per E-Mail.';
-
-    var show = function (msg, type) {
-      status.className = 'form-status' + (type ? ' is-' + type : '');
-      status.textContent = msg;
-    };
+    var to = form.getAttribute('data-mailto');
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
       var firstInvalid = null;
       form.querySelectorAll('[required]').forEach(function (field) {
-        var ok = field.type === 'checkbox' ? field.checked : field.value.trim() !== '';
+        var ok = field.value.trim() !== '';
         field.setAttribute('aria-invalid', String(!ok));
         if (!ok && !firstInvalid) firstInvalid = field;
       });
       if (firstInvalid) {
-        show('Bitte füllen Sie Name und Kontakt aus und bestätigen Sie den Datenschutzhinweis.', 'error');
+        status.className = 'form-status is-error';
+        status.textContent = 'Bitte geben Sie Ihren Namen und eine E-Mail-Adresse oder Telefonnummer an.';
         firstInvalid.focus();
         return;
       }
 
-      if (form.action.indexOf('DEINE_FORM_ID') !== -1) {
-        show('Das Formular ist noch nicht eingerichtet (Formspree-ID fehlt). ' + fallback, 'error');
-        return;
-      }
+      var v = function (name) { return form.elements[name].value.trim(); };
+      var name = v('name'), betrieb = v('betrieb'), kontakt = v('kontakt'), nachricht = v('nachricht');
 
-      button.disabled = true;
-      button.textContent = 'Wird gesendet …';
-      show('');
+      var subject = 'Anfrage Erstgespräch – ' + (betrieb || name);
+      var body = [
+        'Hallo Saarflow-Team,',
+        '',
+        'ich interessiere mich für ein kostenloses Erstgespräch.',
+        '',
+        'Name: ' + name,
+        'Betrieb: ' + (betrieb || '–'),
+        'Erreichbar unter: ' + kontakt,
+        '',
+        'Worum es geht:',
+        nachricht || '–',
+        '',
+        'Viele Grüße',
+        name
+      ].join('\r\n');
 
-      fetch(form.action, {
-        method: 'POST',
-        body: new FormData(form),
-        headers: { Accept: 'application/json' }
-      }).then(function (res) {
-        if (res.ok) {
-          form.reset();
-          form.querySelectorAll('[aria-invalid]').forEach(function (f) { f.removeAttribute('aria-invalid'); });
-          show('Danke, Ihre Anfrage ist angekommen. Wir melden uns in Kürze bei Ihnen.', 'success');
-        } else {
-          show('Das hat leider nicht geklappt. ' + fallback, 'error');
-        }
-      }).catch(function () {
-        show('Keine Verbindung. ' + fallback, 'error');
-      }).then(function () {
-        button.disabled = false;
-        button.textContent = buttonLabel;
-      });
+      window.location.href = 'mailto:' + to +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+
+      form.querySelectorAll('[aria-invalid]').forEach(function (f) { f.removeAttribute('aria-invalid'); });
+      status.className = 'form-status is-success';
+      status.textContent = 'Ihr E-Mail-Programm sollte sich jetzt geöffnet haben – bitte dort auf „Senden“ klicken. ' +
+        'Falls nicht, schreiben Sie uns direkt an ' + to + '.';
     });
   }
 })();

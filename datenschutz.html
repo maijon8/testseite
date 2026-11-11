@@ -9,9 +9,9 @@
   <meta name="theme-color" content="#F6F4EF">
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=10">
+  <link rel="stylesheet" href="assets/css/style.css?v=11">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <script>document.documentElement.classList.add('js')</script>
+  <script>(function(d){d.classList.add('js');try{var a=JSON.parse(localStorage.getItem('sf-a11y')||'{}');if(a.font)d.classList.add('a11y-font-'+a.font);for(var k in a){if(k!=='font'&&a[k])d.classList.add('a11y-'+k)}}catch(e){}})(document.documentElement)</script>
 </head>
 <body>
   <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
@@ -55,8 +55,14 @@
       <h2>3. Schriftarten</h2>
       <p>Die auf dieser Website verwendeten Schriftarten sind lokal auf unserem Server gespeichert. Beim Aufruf der Seite wird keine Verbindung zu Servern Dritter (z. B. Google) hergestellt.</p>
 
-      <h2>4. Cookies und Tracking</h2>
-      <p>Diese Website setzt derzeit keine Cookies und verwendet keine Analyse- oder Tracking-Werkzeuge. [Bei späterer Einbindung von z. B. Analyse-Tools diesen Abschnitt anpassen und ggf. ein Einwilligungs-Banner ergänzen.]</p>
+      <h2 id="cookies">4. Cookies, Tracking und lokale Speicherung</h2>
+      <p>Diese Website setzt keine Cookies und verwendet keine Analyse- oder Tracking-Werkzeuge.</p>
+      <p>Im lokalen Speicher Ihres Browsers (localStorage) werden ausschließlich folgende Angaben abgelegt:</p>
+      <ul>
+        <li>dass Sie den Cookie-Hinweis geschlossen haben (damit er nicht bei jedem Seitenaufruf erneut erscheint),</li>
+        <li>Ihre Einstellungen zur Barrierefreiheit, z. B. Schriftgröße oder hoher Kontrast.</li>
+      </ul>
+      <p>Diese Angaben verlassen Ihren Browser nicht und werden nicht an uns oder Dritte übertragen. Die Speicherung ist für die von Ihnen ausdrücklich gewünschte Funktion unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Sie können sie jederzeit über die Einstellungen Ihres Browsers löschen.</p>
 
       <h2>5. Kontaktformular und Kontakt per E-Mail oder Telefon</h2>
       <p>Das Kontaktformular auf dieser Website überträgt keine Daten an uns oder an Dritte. Beim Absenden öffnet sich lediglich Ihr eigenes E-Mail-Programm mit einer vorausgefüllten Nachricht. Erst wenn Sie diese E-Mail selbst absenden, erhalten wir Ihre Angaben.</p>
@@ -96,12 +102,14 @@
           <li><a href="https://saarflow-portal.vercel.app/login">Kundenportal</a></li>
           <li><a href="impressum.html">Impressum</a></li>
           <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="barrierefreiheit.html">Barrierefreiheit</a></li>
+          <li><button type="button" class="link-btn" data-cookie-settings>Cookie-Hinweis</button></li>
         </ul>
       </nav>
       <p class="copyright">© 2026 Saarflow · Mailänder &amp; Scholl GbR</p>
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=10" defer></script>
+  <script src="assets/js/main.js?v=11" defer></script>
 </body>
 </html>

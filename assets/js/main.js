@@ -107,3 +107,127 @@
     });
   }
 })();
+
+// ==========================================================================
+// Barrierefreiheit: Einstellungs-Menü (Einstellungen bleiben lokal im Browser)
+// Die Klassen werden schon im <head> gesetzt, damit nichts flackert.
+// ==========================================================================
+(function () {
+  'use strict';
+  var KEY = 'sf-a11y';
+  var root = document.documentElement;
+  var state = {};
+  try { state = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) { state = {}; }
+
+  var toggles = [
+    ['contrast', 'Hoher Kontrast'],
+    ['links', 'Links hervorheben'],
+    ['readable', 'Gut lesbare Schrift'],
+    ['spacing', 'Mehr Zeilen- und Zeichenabstand'],
+    ['motion', 'Animationen stoppen'],
+    ['cursor', 'Großer Mauszeiger']
+  ];
+  var sizes = ['Normal', 'Groß', 'Sehr groß'];
+
+  function apply() {
+    root.className = root.className.replace(/\ba11y-[\w-]+/g, '').replace(/\s+/g, ' ').trim();
+    if (state.font) root.classList.add('a11y-font-' + state.font);
+    toggles.forEach(function (t) { if (state[t[0]]) root.classList.add('a11y-' + t[0]); });
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+  }
+
+  var btn = document.createElement('button');
+  btn.type = 'button';
+  btn.className = 'a11y-btn';
+  btn.setAttribute('aria-expanded', 'false');
+  btn.setAttribute('aria-controls', 'a11y-panel');
+  btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="4" r="2"/><path d="M4 8.5c2.6.8 5.3 1.2 8 1.2s5.4-.4 8-1.2M12 9.7V15m0 0-3.5 6.5M12 15l3.5 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+    '<span class="visually-hidden">Barrierefreiheit: Einstellungen öffnen</span>';
+
+  var panel = document.createElement('div');
+  panel.id = 'a11y-panel';
+  panel.className = 'a11y-panel';
+  panel.setAttribute('role', 'dialog');
+  panel.setAttribute('aria-labelledby', 'a11y-title');
+  panel.hidden = true;
+  var html = '<div class="a11y-head"><h2 id="a11y-title">Barrierefreiheit</h2>' +
+    '<button type="button" class="a11y-close"><span aria-hidden="true">×</span><span class="visually-hidden">Einstellungen schließen</span></button></div>' +
+    '<p class="a11y-group" id="a11y-size-label">Schriftgröße</p><div class="a11y-sizes" role="group" aria-labelledby="a11y-size-label">';
+  sizes.forEach(function (label, i) { html += '<button type="button" data-size="' + i + '">' + label + '</button>'; });
+  html += '</div><ul class="a11y-list">';
+  toggles.forEach(function (t) {
+    html += '<li><button type="button" class="a11y-toggle" data-key="' + t[0] + '"><span>' + t[1] + '</span><span class="a11y-switch" aria-hidden="true"></span></button></li>';
+  });
+  html += '</ul><div class="a11y-foot"><button type="button" class="a11y-reset">Alles zurücksetzen</button>' +
+    '<a href="barrierefreiheit.html">Erklärung zur Barrierefreiheit</a></div>';
+  panel.innerHTML = html;
+
+  function sync() {
+    panel.querySelectorAll('[data-size]').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(Number(b.getAttribute('data-size')) === (state.font || 0)));
+    });
+    panel.querySelectorAll('[data-key]').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(!!state[b.getAttribute('data-key')]));
+    });
+  }
+  function open(isOpen) {
+    panel.hidden = !isOpen;
+    btn.setAttribute('aria-expanded', String(isOpen));
+    if (isOpen) panel.querySelector('[data-size]').focus(); else btn.focus();
+  }
+
+  panel.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    if (b.hasAttribute('data-size')) state.font = Number(b.getAttribute('data-size'));
+    else if (b.hasAttribute('data-key')) { var k = b.getAttribute('data-key'); state[k] = !state[k]; }
+    else if (b.classList.contains('a11y-reset')) state = {};
+    else if (b.classList.contains('a11y-close')) { open(false); return; }
+    apply(); sync();
+  });
+  btn.addEventListener('click', function () { open(panel.hidden); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !panel.hidden) open(false); });
+  document.addEventListener('click', function (e) {
+    if (!panel.hidden && !panel.contains(e.target) && !btn.contains(e.target)) { panel.hidden = true; btn.setAttribute('aria-expanded', 'false'); }
+  });
+
+  document.body.appendChild(btn);
+  document.body.appendChild(panel);
+  sync();
+})();
+
+// ==========================================================================
+// Cookie-Hinweis
+// Die Website setzt derzeit keine Cookies und kein Tracking. Der Hinweis
+// informiert darüber. Wird später z. B. ein Statistik-Tool eingebunden, hier
+// eine Einwilligungs-Option ergänzen und das Tool erst nach Zustimmung laden.
+// ==========================================================================
+(function () {
+  'use strict';
+  var KEY = 'sf-consent';
+  var stored = null;
+  try { stored = localStorage.getItem(KEY); } catch (e) {}
+
+  var banner = document.createElement('section');
+  banner.className = 'cookie-banner';
+  banner.setAttribute('aria-labelledby', 'cookie-title');
+  banner.innerHTML = '<div class="cookie-text"><h2 id="cookie-title">Keine Cookies, kein Tracking</h2>' +
+    '<p>Diese Website verwendet keine Cookies und keine Analyse-Tools. Gespeichert werden nur Ihre eigenen Einstellungen, z. B. zur Barrierefreiheit – lokal in Ihrem Browser. ' +
+    '<a href="datenschutz.html#cookies">Mehr in der Datenschutzerklärung</a></p></div>' +
+    '<button type="button" class="btn btn-small cookie-ok">Verstanden</button>';
+  banner.hidden = !!stored;
+  document.body.appendChild(banner);
+
+  function place() {
+    document.documentElement.style.setProperty('--cookie-h', banner.hidden ? '0px' : banner.offsetHeight + 'px');
+  }
+  banner.querySelector('.cookie-ok').addEventListener('click', function () {
+    try { localStorage.setItem(KEY, JSON.stringify({ necessary: true, date: new Date().toISOString() })); } catch (e) {}
+    banner.hidden = true; place();
+    var trigger = document.querySelector('[data-cookie-settings]'); if (trigger && document.activeElement === document.body) trigger.focus();
+  });
+  document.querySelectorAll('[data-cookie-settings]').forEach(function (b) {
+    b.addEventListener('click', function () { banner.hidden = false; place(); banner.querySelector('.cookie-ok').focus(); });
+  });
+  window.addEventListener('resize', place);
+  place();
+})();

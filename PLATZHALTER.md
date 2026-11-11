@@ -27,3 +27,9 @@ Straße/PLZ bei der verantwortlichen Stelle, Kundenportal (Hosting-Anbieter, z. 
 ## Sonstiges
 - Domain in Meta-Daten/Canonical, Open-Graph-Bild (noch nicht vorhanden)
 - Logo ist eine einfache SVG-Wortmarke (`assets/favicon.svg`, im Header inline) – ggf. durch echtes Logo ersetzen
+
+## Erklärung zur Barrierefreiheit (`barrierefreiheit.html`)
+E-Mail und Telefon für Feedback; prüfen lassen, ob das BFSG für Saarflow gilt.
+
+## Cookie-Hinweis
+Die Seite setzt keine Cookies und kein Tracking – der Banner informiert nur. Wird später z. B. ein Statistik-Tool eingebunden, muss der Banner eine echte Einwilligung abfragen (siehe Kommentar in `assets/js/main.js`) und die Datenschutzerklärung angepasst werden.

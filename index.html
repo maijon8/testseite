@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#F6F4EF">
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=7">
+  <link rel="stylesheet" href="assets/css/style.css?v=8">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -46,7 +46,7 @@
         <div class="hero-copy">
           <p class="eyebrow">Websites für kleine Betriebe · Saarland</p>
           <h1 id="hero-title">Wir bauen die Website für Ihren Betrieb. Und kümmern uns danach um alles.</h1>
-          <p class="lead">Saarflow erstellt Ihre Website zum Festpreis und betreibt sie danach für Sie: Hosting, Sicherheits-Updates und Änderungswünsche. Dokumente und Wünsche schicken Sie uns jederzeit über das Kundenportal.</p>
+          <p class="lead">Saarflow erstellt Ihre Website zum Festpreis und betreibt sie danach für Sie: Hosting, Sicherheits-Updates und jede Änderung. Sie sagen uns im Kundenportal Bescheid, was sich ändern soll – wir erledigen den Rest.</p>
           <div class="hero-actions">
             <a class="btn btn-portal btn-large" href="https://saarflow-portal.vercel.app/login">Zum Kundenportal <span aria-hidden="true">→</span></a>
             <a class="btn btn-outline btn-large" href="#kontakt">Kostenloses Erstgespräch vereinbaren</a>
@@ -61,27 +61,30 @@
         </div>
 
         <!-- Produktansicht (HTML/CSS-Mockup, kein Bild) -->
-        <div class="hero-visual reveal" role="img" aria-label="Produktansicht: links die Website einer Beispiel-Bäckerei auf dem Smartphone, rechts der Saarflow-Editor, in dem die Öffnungszeiten geändert werden.">
+        <div class="hero-visual reveal" role="img" aria-label="Produktansicht: Im Saarflow-Kundenportal bittet eine Beispiel-Bäckerei um neue Öffnungszeiten für Sonntag, Saarflow meldet die Änderung als erledigt. Daneben zeigt ein Smartphone die aktualisierte Website.">
           <div class="mock-editor" aria-hidden="true">
-            <div class="mock-bar"><span></span><span></span><span></span><em>app.saarflow.de</em></div>
+            <div class="mock-bar"><span></span><span></span><span></span><em>saarflow-portal</em></div>
             <div class="mock-body">
               <aside class="mock-side">
-                <b>Bäckerei Becker</b>
+                <b>Kundenportal</b>
                 <ul>
-                  <li>Startseite</li>
-                  <li class="is-active">Öffnungszeiten</li>
-                  <li>Angebote</li>
-                  <li>Bilder</li>
-                  <li>Kontakt</li>
+                  <li class="is-active">Wünsche</li>
+                  <li>Dokumente</li>
+                  <li>Meine Website</li>
                 </ul>
               </aside>
               <div class="mock-main">
-                <p class="mock-label">Öffnungszeiten</p>
-                <div class="mock-row"><span>Mo – Fr</span><span class="mock-input">06:00 – 18:00</span></div>
-                <div class="mock-row"><span>Samstag</span><span class="mock-input">06:00 – 13:00</span></div>
-                <div class="mock-row"><span>Sonntag</span><span class="mock-input is-edit">07:30 – 11:00<i></i></span></div>
-                <div class="mock-row mock-note"><span>Hinweis</span><span class="mock-input">24.12. nur bis 12 Uhr</span></div>
-                <div class="mock-save"><span class="mock-status">Wird auf der Website angezeigt</span><span class="mock-btn">Speichern</span></div>
+                <p class="mock-label">Wünsche · Bäckerei Becker</p>
+                <div class="mock-msg mock-msg--in">
+                  <p>Können Sie für Ostersonntag 07:30 – 11:00 Uhr als Öffnungszeit eintragen? Das Plakat hänge ich an.</p>
+                  <span class="mock-file">Osterplakat.pdf</span>
+                  <small>Fr, 18:42</small>
+                </div>
+                <div class="mock-msg mock-msg--out">
+                  <p>Erledigt – die neuen Zeiten stehen jetzt auf Ihrer Website.</p>
+                  <small>Saarflow · Fr, 19:10</small>
+                </div>
+                <div class="mock-save"><span class="mock-status">Änderung ist online</span><span class="mock-btn">Neuer Wunsch</span></div>
               </div>
             </div>
           </div>
@@ -112,7 +115,7 @@
             <h3>Heute</h3>
             <ul class="list-x">
               <li>Die Seite stammt von 2014 und ist auf dem Handy kaum lesbar.</li>
-              <li>Öffnungszeiten ändern heißt: die Agentur anrufen, Angebot abwarten, zahlen.</li>
+              <li>Öffnungszeiten ändern heißt: die Agentur anrufen, warten, nachhaken.</li>
               <li>Niemand weiß mehr, wo das Passwort für Domain und Hosting liegt.</li>
               <li>Plugins veralten, irgendwann zeigt der Browser „Nicht sicher“.</li>
             </ul>
@@ -121,7 +124,7 @@
             <h3>Mit Saarflow</h3>
             <ul class="list-check">
               <li>Eine schnelle, mobile Website, gebaut nach Ihren Inhalten.</li>
-              <li>Öffnungszeiten, Angebote und Bilder ändern Sie selbst im Editor.</li>
+              <li>Neue Öffnungszeiten, Angebote oder Bilder? Kurz Bescheid sagen – wir setzen es um.</li>
               <li>Domain, Hosting, SSL-Zertifikat und Backups laufen bei uns.</li>
               <li>Updates und Sicherheit sind im Hosting für 49 € im Monat enthalten.</li>
             </ul>
@@ -131,9 +134,9 @@
         <figure class="case reveal">
           <p class="case-tag">Anwendungsbeispiel <mark class="ph">[Beispiel, fiktiv – durch echten Kundenfall ersetzen]</mark></p>
           <blockquote>
-            <p>Bäckerei Becker in Dillingen backt für Ostern einen Sonntag länger. Freitagabend trägt die Inhaberin die neuen Zeiten am Handy ein – ohne Anruf, ohne Rechnung. Samstagfrüh stehen sie auf der Website und im Google-Unternehmensprofil.</p>
+            <p>Bäckerei Becker in Dillingen backt für Ostern einen Sonntag länger. Freitagabend schreibt die Inhaberin die neuen Zeiten ins Kundenportal und hängt das Plakat an. Samstagfrüh stehen sie auf der Website und im Google-Unternehmensprofil.</p>
           </blockquote>
-          <figcaption>Aufwand für den Betrieb: zwei Minuten. Aufwand für Technik: keiner.</figcaption>
+          <figcaption>Aufwand für den Betrieb: eine Nachricht. Um den Rest kümmern wir uns.</figcaption>
         </figure>
       </div>
     </section>
@@ -172,7 +175,7 @@
             <div class="step-num" aria-hidden="true">04</div>
             <div class="step-text">
               <h3>Laufender Betrieb</h3>
-              <p>Kleine Änderungen machen Sie selbst im Editor. Für alles Größere – eine neue Unterseite, ein Stellenangebot – schreiben Sie uns eine Nachricht. Updates und Sicherheit übernehmen wir im Hintergrund.</p>
+              <p>Sie sagen uns im Kundenportal Bescheid, was sich ändern soll – neue Öffnungszeiten, ein Stellenangebot, eine neue Unterseite. Wir setzen es für Sie um, Sie müssen sich um nichts kümmern. Updates und Sicherheit übernehmen wir im Hintergrund.</p>
             </div>
           </li>
         </ol>
@@ -245,7 +248,7 @@
               <dd><strong>Für alle gleich.</strong> Gleiche Antwortzeiten für jeden Kunden – alle sind uns gleich wichtig.</dd>
             </div>
           </dl>
-          <p class="plan-note"><mark class="ph">[Steuerhinweis: „Alle Preise zzgl. MwSt.“ oder „Gemäß § 19 UStG wird keine Umsatzsteuer berechnet.“]</mark></p>
+          <p class="plan-note">Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung). Die genannten Preise sind Endpreise.</p>
         </div>
       </div>
     </section>
@@ -350,6 +353,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=7" defer></script>
+  <script src="assets/js/main.js?v=8" defer></script>
 </body>
 </html>

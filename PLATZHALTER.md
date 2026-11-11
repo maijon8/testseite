@@ -6,8 +6,7 @@ Auf der Seite sind alle Platzhalter sichtbar orange-gestrichelt markiert (`<mark
 | Bereich | Platzhalter |
 |---|---|
 | Hero – Fakten | Dauer bis online `[14]` Tage |
-| Preise | Steuerhinweis (zzgl. MwSt. oder § 19 UStG Kleinunternehmer) |
-| Hero – Mockup | „Bäckerei Becker, Dillingen“ ist ein fiktiver Beispielbetrieb (auch im Ablauf: `baeckerei-becker.de`) |
+| Hero – Mockup | Kundenportal-Ansicht ist nachgebaut, nicht das echte Portal. „Bäckerei Becker, Dillingen“ ist ein fiktiver Beispielbetrieb (auch im Ablauf: `baeckerei-becker.de`) |
 | Problem → Lösung | Anwendungsbeispiel ist fiktiv → durch echten Kundenfall ersetzen |
 | So funktioniert's | Leistungsversprechen prüfen: „30 Minuten“, „zwei Korrekturrunden“, „Backup täglich“, Google-Profil-Verknüpfung |
 | Fotos (Zusatzleistung) | Nutzungsrechte der Bilder für Kunden (Google-Profil, Social Media, Flyer) vertraglich regeln |
@@ -18,7 +17,7 @@ Auf der Seite sind alle Platzhalter sichtbar orange-gestrichelt markiert (`<mark
 | Footer | – (Mailänder & Scholl GbR eingetragen) |
 
 ## Impressum (`impressum.html`)
-Straße + PLZ in Saarlouis, Vorname Scholl, verantwortliche Person nach MStV, Telefon, E-Mail, Registergericht + HRB, USt-IdNr., Verantwortliche:r nach § 18 Abs. 2 MStV, Hinweise zu Streitschlichtung prüfen, Haftungstexte.
+Straße + PLZ in Saarlouis, Vorname Scholl, verantwortliche Person nach MStV, Telefon, E-Mail, Steuernummer der GbR, Verantwortliche:r nach § 18 Abs. 2 MStV, Hinweise zu Streitschlichtung prüfen, Haftungstexte.
 
 ## Datenschutz (`datenschutz.html`)
 Straße/PLZ und Vorname Scholl bei der verantwortlichen Stelle, Kundenportal (Hosting-Anbieter, z. B. Vercel), ggf. Datenschutzbeauftragte:r, Hosting-Anbieter + Speicherdauer der Logfiles, ggf. E-Mail-Anbieter, Anschrift der Aufsichtsbehörde (Unabhängiges Datenschutzzentrum Saarland), Stand-Datum.

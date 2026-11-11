@@ -45,6 +45,14 @@
     items.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
+  // Paket-Buttons wählen das passende Paket im Kontaktformular vor
+  var paketSelect = document.getElementById('paket');
+  document.querySelectorAll('[data-paket]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (paketSelect) paketSelect.value = link.getAttribute('data-paket');
+    });
+  });
+
   // Kontaktformular – öffnet das E-Mail-Programm mit vorausgefüllter Nachricht (mailto)
   var form = document.querySelector('[data-contact-form]');
   if (form) {
@@ -68,9 +76,9 @@
       }
 
       var v = function (id) { return document.getElementById(id).value.trim(); };
-      var name = v('name'), betrieb = v('betrieb'), kontakt = v('email'), nachricht = v('nachricht');
+      var name = v('name'), betrieb = v('betrieb'), kontakt = v('email'), nachricht = v('nachricht'), paket = v('paket');
 
-      var subject = 'Anfrage Erstgespräch – ' + (betrieb || name);
+      var subject = 'Anfrage Erstgespräch' + (paket ? ' (' + paket + ')' : '') + ' – ' + (betrieb || name);
       var body = [
         'Hallo Saarflow-Team,',
         '',
@@ -79,6 +87,7 @@
         'Name: ' + name,
         'Betrieb: ' + (betrieb || '–'),
         'Erreichbar unter: ' + kontakt,
+        'Interesse an: ' + (paket ? 'Paket ' + paket : 'noch unsicher – bitte beraten Sie mich'),
         '',
         'Worum es geht:',
         nachricht || '–',

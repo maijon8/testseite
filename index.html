@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Saarflow – Websites für kleine Betriebe, gebaut und gepflegt</title>
-  <meta name="description" content="Saarflow baut die Website für Ihren Betrieb und kümmert sich danach um Hosting und Updates. Websites ab 949 €, Hosting 49 € im Monat. Aus dem Saarland.">
+  <meta name="description" content="Saarflow baut die Website für Ihren Betrieb und kümmert sich danach um Hosting und Updates. Websites ab 949 €, Hosting 49 € im Monat. Aus Saarlouis.">
   <meta name="theme-color" content="#F6F4EF">
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=9">
+  <link rel="stylesheet" href="assets/css/style.css?v=10">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -215,7 +215,7 @@
               <li>Texte und Bilder, abgestimmt auf Ihren Betrieb</li>
               <li class="plan-option">Optional: Fotos von uns bei Ihnen vor Ort <strong>+ 99 € einmalig</strong></li>
             </ul>
-            <a class="btn btn-outline" href="#kontakt">Standard anfragen</a>
+            <a class="btn btn-outline" href="#kontakt" data-paket="Standard">Standard anfragen</a>
           </article>
 
           <article class="plan plan--premium reveal" aria-labelledby="plan-premium">
@@ -230,7 +230,7 @@
               <li>Professionelle Fotos von uns – inklusive</li>
               <li>Ihre Google-Bewertungen direkt auf der Website</li>
             </ul>
-            <a class="btn" href="#kontakt">Premium anfragen</a>
+            <a class="btn" href="#kontakt" data-paket="Premium">Premium anfragen</a>
           </article>
         </div>
 
@@ -260,41 +260,53 @@
       <div class="container about-grid">
         <div class="about-copy reveal">
           <p class="eyebrow"><span class="num">04</span> Über uns</p>
-          <h2 id="about-title">Aus dem Saarland, für Betriebe aus der Region.</h2>
-          <p>Saarflow sitzt in <mark class="ph">[Ort, z. B. Saarbrücken]</mark>. Wir kennen die Betriebe hier: Handwerk, Gastronomie, Praxen, Einzelhandel. Wenig Zeit, viel zu tun – und eine Website, die einfach funktionieren soll.</p>
-          <p>Deshalb haben Sie bei uns eine feste Ansprechperson, die Sie anrufen können. Und wenn es passt, kommen wir auch vorbei.</p>
-          <p class="team-ph"><mark class="ph">[Platzhalter: Teamfoto oder Kurzvorstellung der Gründer:innen]</mark></p>
+          <h2 id="about-title">Aus Saarlouis, für Betriebe aus der Region.</h2>
+          <p>Hinter Saarflow stehen Dennis Scholl und Jonas Mailänder. Beide sind in Saarlouis geboren, kennengelernt haben sie sich im Studium an der htw saar. Schnell war klar: Die beiden teilen nicht nur die Begeisterung für IT und Wirtschaft, sondern auch den Wunsch, etwas Eigenes aufzubauen.</p>
+          <p>Mit Saarflow bringen sie beides zusammen: Technik, die zuverlässig läuft, und ein Gespür dafür, was ein Betrieb wirklich braucht. Nämlich eine Website, die Kunden bringt – ohne dass man sich selbst darum kümmern muss.</p>
+          <p>Der Sitz von Saarflow ist in Saarlouis. Wir arbeiten komplett online, ohne Ladenlokal, dafür mit kurzen Wegen: Sie erreichen uns über das Kundenportal, per E-Mail oder Telefon – und sprechen immer direkt mit einem von uns beiden.</p>
         </div>
-        <div class="about-visual reveal" aria-hidden="true">
-          <!-- Abstrakte Linie, angelehnt an die Saarschleife -->
-          <svg viewBox="0 0 400 400" class="saarschleife">
-            <defs>
-              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="currentColor" stroke-opacity=".12"/></pattern>
-            </defs>
-            <rect width="400" height="400" fill="url(#grid)"/>
-            <path class="river" d="M20 60 C140 40 220 80 250 150 C290 240 140 250 130 200 C120 150 240 120 300 200 C350 270 330 340 380 360" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-            <circle cx="250" cy="150" r="6" class="pin"/>
-            <text x="262" y="146" class="svg-label">49°N 6.9°E</text>
-          </svg>
+
+        <div class="about-visual reveal">
+          <ul class="founders">
+            <li class="founder">
+              <div class="founder-photo" aria-hidden="true"><span>DS</span></div>
+              <p class="founder-name">Dennis Scholl</p>
+              <p class="founder-role">Mitgründer</p>
+            </li>
+            <li class="founder">
+              <div class="founder-photo" aria-hidden="true"><span>JM</span></div>
+              <p class="founder-name">Jonas Mailänder</p>
+              <p class="founder-role">Mitgründer</p>
+            </li>
+          </ul>
+          <p class="founder-note"><mark class="ph">[Platzhalter: Fotos der Gründer ersetzen die Initialen]</mark></p>
+          <dl class="about-facts">
+            <div><dt>Sitz</dt><dd>Saarlouis</dd></div>
+            <div><dt>Kennengelernt</dt><dd>Studium an der htw saar</dd></div>
+            <div><dt>Arbeitsweise</dt><dd>100 % online</dd></div>
+          </dl>
         </div>
       </div>
 
       <div class="container">
-        <div class="proof">
-          <figure class="quote placeholder-box reveal">
-            <blockquote><p>„[Platzhalter für Kundenstimme: ein bis zwei Sätze, was sich durch die neue Website konkret verändert hat.]“</p></blockquote>
-            <figcaption>[Name], [Betrieb], [Ort]</figcaption>
-          </figure>
-          <figure class="quote placeholder-box reveal">
-            <blockquote><p>„[Platzhalter für Kundenstimme: z. B. weniger Anrufe wegen Öffnungszeiten, mehr Anfragen über das Formular.]“</p></blockquote>
-            <figcaption>[Name], [Betrieb], [Ort]</figcaption>
-          </figure>
-        </div>
-        <div class="logos reveal">
-          <p class="logos-label">Betriebe, die mit Saarflow arbeiten <mark class="ph">[Platzhalter]</mark></p>
-          <ul>
-            <li class="logo-ph">Logo 1</li><li class="logo-ph">Logo 2</li><li class="logo-ph">Logo 3</li><li class="logo-ph">Logo 4</li><li class="logo-ph">Logo 5</li>
-          </ul>
+        <div class="first-clients reveal">
+          <div class="first-copy">
+            <p class="eyebrow">Kundenstimmen</p>
+            <h3>Noch keine Bewertungen – das sagen wir ehrlich.</h3>
+            <p>Saarflow ist neu. Statt erfundener Kundenstimmen steht hier bald, was unsere ersten Kunden über ihre neue Website sagen. Vielleicht ja Sie?</p>
+            <a class="text-link" href="#kontakt">Einer der ersten Betriebe werden <span aria-hidden="true">→</span></a>
+          </div>
+          <div class="first-slots">
+            <p class="slots-label">Betriebe, die mit Saarflow arbeiten</p>
+            <ul aria-label="Noch freie Plätze">
+              <li class="slot slot--you"><span>Ihr Betrieb?</span></li>
+              <li class="slot"><span>Platz frei</span></li>
+              <li class="slot"><span>Platz frei</span></li>
+              <li class="slot"><span>Platz frei</span></li>
+              <li class="slot"><span>Platz frei</span></li>
+              <li class="slot"><span>Platz frei</span></li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -309,7 +321,7 @@
           <dl class="contact-data">
             <div><dt>Telefon</dt><dd><a href="tel:+490000000000"><mark class="ph ph--dark">[0681 000000]</mark></a></dd></div>
             <div><dt>E-Mail</dt><dd><a href="mailto:hallo@saarflow.example"><mark class="ph ph--dark">[hallo@saarflow.de]</mark></a></dd></div>
-            <div><dt>Adresse</dt><dd><mark class="ph ph--dark">[Straße Nr., 66XXX Ort]</mark></dd></div>
+            <div><dt>Sitz</dt><dd>Saarlouis · wir arbeiten komplett online</dd></div>
           </dl>
         </div>
 
@@ -327,6 +339,16 @@
           <div class="field">
             <label for="email">E-Mail oder Telefon</label>
             <input id="email" type="text" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="paket">Interesse an</label>
+            <div class="select-wrap">
+              <select id="paket">
+                <option value="">Noch unsicher – bitte beraten Sie mich</option>
+                <option value="Standard">Standard – 949 € einmalig + 49 € / Monat</option>
+                <option value="Premium">Premium – ab 1.500 € einmalig + 49 € / Monat</option>
+              </select>
+            </div>
           </div>
           <div class="field">
             <label for="nachricht">Worum geht es? <span class="optional">(optional)</span></label>
@@ -355,6 +377,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=9" defer></script>
+  <script src="assets/js/main.js?v=10" defer></script>
 </body>
 </html>

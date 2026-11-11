@@ -341,6 +341,11 @@ html:not(.js) .nav-toggle { display: none; }
 .plan-price { margin: .75rem 0 .75rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: .25rem .6rem; }
 .plan-price .amount { font-family: var(--f-display); font-weight: 650; font-size: clamp(2.4rem, 1.8rem + 2.4vw, 3.4rem); letter-spacing: -0.03em; line-height: 1; }
 .plan-price .unit { color: var(--ink-2); font-size: .9375rem; }
+.plan-monthly { display: flex; flex-wrap: wrap; align-items: baseline; gap: .15rem .6rem; margin: 0 0 1.25rem; padding: .75rem 1rem; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; color: var(--ink); font-size: .9375rem; line-height: 1.4; }
+.plan-monthly { flex-direction: column; align-items: flex-start; }
+.plan-monthly .plus { font-family: var(--f-display); font-weight: 650; font-size: 1.5rem; letter-spacing: -0.02em; white-space: nowrap; }
+.plan-monthly .per { font-size: 1.05rem; font-weight: 600; }
+.plan-monthly .what { color: var(--ink-2); }
 .plan-for { color: var(--ink-2); margin: 0; }
 .plan-list { flex: 1; margin-bottom: 2rem; }
 .plan-list li { position: relative; padding: .6rem 0 .6rem 1.75rem; }

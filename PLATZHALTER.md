@@ -13,13 +13,13 @@ Auf der Seite sind alle Platzhalter sichtbar orange-gestrichelt markiert (`<mark
 | Vertrauen | 2 Kundenstimmen (Zitat, Name, Betrieb, Ort), 5 Kundenlogos |
 | Kontakt | Telefon, E-Mail (auch `tel:`/`mailto:`-Links!), Adresse |
 | Kontaktformular | Öffnet das E-Mail-Programm (mailto). Empfänger-Adresse `hallo@saarflow.example` in `index.html` ersetzen: im Formular (`action` + `data-mailto`) und beim E-Mail-Link im Kontaktbereich |
-| Footer | Rechtsform (`[Rechtsform]`) |
+| Footer | – (Mailänder & Scholl GbR eingetragen) |
 
 ## Impressum (`impressum.html`)
-Firmenname, Rechtsform, Anschrift, Vertretungsberechtigte, Telefon, E-Mail, Registergericht + HRB, USt-IdNr., Verantwortliche:r nach § 18 Abs. 2 MStV, Hinweise zu Streitschlichtung prüfen, Haftungstexte.
+Straße + PLZ in Saarlouis, Vorname Scholl, verantwortliche Person nach MStV, Telefon, E-Mail, Registergericht + HRB, USt-IdNr., Verantwortliche:r nach § 18 Abs. 2 MStV, Hinweise zu Streitschlichtung prüfen, Haftungstexte.
 
 ## Datenschutz (`datenschutz.html`)
-Verantwortliche Stelle, ggf. Datenschutzbeauftragte:r, Hosting-Anbieter + Speicherdauer der Logfiles, ggf. E-Mail-Anbieter, Anschrift der Aufsichtsbehörde (Unabhängiges Datenschutzzentrum Saarland), Stand-Datum.
+Straße/PLZ und Vorname Scholl bei der verantwortlichen Stelle, Kundenportal (Hosting-Anbieter, z. B. Vercel), ggf. Datenschutzbeauftragte:r, Hosting-Anbieter + Speicherdauer der Logfiles, ggf. E-Mail-Anbieter, Anschrift der Aufsichtsbehörde (Unabhängiges Datenschutzzentrum Saarland), Stand-Datum.
 
 > Rechtstexte sind Gliederungen mit Mustertexten, keine Rechtsberatung – vor Livegang prüfen lassen.
 

@@ -393,6 +393,12 @@ html:not(.js) .nav-toggle { display: none; }
 .contact-form .btn { justify-self: start; }
 .form-status { margin: 0; font-size: .9375rem; color: var(--on-dark-2); min-height: 1.5em; }
 .form-status:empty { display: none; }
+.form-status.is-success { color: var(--on-dark); padding: 1rem; border-left: 3px solid #51CF66; background: rgba(81, 207, 102, .08); }
+.form-status.is-error { color: var(--on-dark); padding: 1rem; border-left: 3px solid var(--accent-on-dark); background: rgba(240, 122, 62, .1); }
+.form-hint { margin: -.25rem 0 0; font-size: .875rem; color: var(--on-dark-2); }
+.contact-form .btn[disabled] { opacity: .6; cursor: progress; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.contact-form { position: relative; }
 @media (min-width: 960px) { .contact-grid { grid-template-columns: 1fr 1fr; gap: 6rem; } }
 
 /* ---------- Footer ---------- */

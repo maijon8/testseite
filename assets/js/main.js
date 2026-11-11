@@ -45,12 +45,22 @@
     items.forEach(function (el) { el.classList.add('is-visible'); });
   }
 
-  // Kontaktformular – PLATZHALTER: noch nicht an einen Versanddienst angebunden
-  var form = document.querySelector('[data-placeholder-form]');
+  // Kontaktformular – Versand über Formspree (action-Attribut im HTML)
+  var form = document.querySelector('[data-contact-form]');
   if (form) {
     var status = form.querySelector('.form-status');
+    var button = form.querySelector('button[type="submit"]');
+    var buttonLabel = button.textContent;
+    var fallback = 'Bitte versuchen Sie es später erneut oder schreiben Sie uns direkt per E-Mail.';
+
+    var show = function (msg, type) {
+      status.className = 'form-status' + (type ? ' is-' + type : '');
+      status.textContent = msg;
+    };
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
       var firstInvalid = null;
       form.querySelectorAll('[required]').forEach(function (field) {
         var ok = field.type === 'checkbox' ? field.checked : field.value.trim() !== '';
@@ -58,12 +68,38 @@
         if (!ok && !firstInvalid) firstInvalid = field;
       });
       if (firstInvalid) {
-        status.textContent = 'Bitte füllen Sie Name und Kontakt aus und bestätigen Sie den Datenschutzhinweis.';
+        show('Bitte füllen Sie Name und Kontakt aus und bestätigen Sie den Datenschutzhinweis.', 'error');
         firstInvalid.focus();
         return;
       }
-      status.textContent = 'Danke! (Hinweis: Das Formular ist noch nicht angebunden – Platzhalter.)';
-      form.reset();
+
+      if (form.action.indexOf('DEINE_FORM_ID') !== -1) {
+        show('Das Formular ist noch nicht eingerichtet (Formspree-ID fehlt). ' + fallback, 'error');
+        return;
+      }
+
+      button.disabled = true;
+      button.textContent = 'Wird gesendet …';
+      show('');
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      }).then(function (res) {
+        if (res.ok) {
+          form.reset();
+          form.querySelectorAll('[aria-invalid]').forEach(function (f) { f.removeAttribute('aria-invalid'); });
+          show('Danke, Ihre Anfrage ist angekommen. Wir melden uns in Kürze bei Ihnen.', 'success');
+        } else {
+          show('Das hat leider nicht geklappt. ' + fallback, 'error');
+        }
+      }).catch(function () {
+        show('Keine Verbindung. ' + fallback, 'error');
+      }).then(function () {
+        button.disabled = false;
+        button.textContent = buttonLabel;
+      });
     });
   }
 })();

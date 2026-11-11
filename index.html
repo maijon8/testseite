@@ -254,8 +254,13 @@
           </dl>
         </div>
 
-        <form class="contact-form" action="#" method="post" novalidate data-placeholder-form>
-          <!-- PLATZHALTER: Formular ist noch an keinen Versanddienst angebunden -->
+        <!-- Versand über Formspree. FORMULAR-ID: "DEINE_FORM_ID" durch die ID aus dem Formspree-Dashboard ersetzen -->
+        <form class="contact-form" action="https://formspree.io/f/DEINE_FORM_ID" method="post" novalidate data-contact-form>
+          <input type="hidden" name="_subject" value="Neue Anfrage über Saarflow – Erstgespräch">
+          <div class="hp" aria-hidden="true">
+            <label for="_gotcha">Bitte freilassen</label>
+            <input id="_gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
           <div class="field">
             <label for="name">Name</label>
             <input id="name" name="name" type="text" autocomplete="name" required>
@@ -273,10 +278,11 @@
             <textarea id="nachricht" name="nachricht" rows="4" placeholder="z. B. Wir haben noch keine Website / unsere ist veraltet"></textarea>
           </div>
           <div class="field field-check">
-            <input id="datenschutz" name="datenschutz" type="checkbox" required>
+            <input id="datenschutz" name="datenschutz" type="checkbox" value="ja" required>
             <label for="datenschutz">Ich bin einverstanden, dass meine Angaben zur Beantwortung meiner Anfrage verarbeitet werden. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</label>
           </div>
           <button class="btn btn-light" type="submit">Erstgespräch anfragen</button>
+          <p class="form-hint">Wir melden uns innerhalb von <mark class="ph ph--dark">[2]</mark> Werktagen.</p>
           <p class="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>

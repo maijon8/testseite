@@ -10,7 +10,6 @@ Auf der Seite sind alle Platzhalter sichtbar orange-gestrichelt markiert (`<mark
 | Problem → Lösung | Anwendungsbeispiel ist fiktiv → durch echten Kundenfall ersetzen |
 | So funktioniert's | Leistungsversprechen prüfen: „30 Minuten“, „zwei Korrekturrunden“, „Backup täglich“, Google-Profil-Verknüpfung |
 | Fotos (Zusatzleistung) | Nutzungsrechte der Bilder für Kunden (Google-Profil, Social Media, Flyer) vertraglich regeln |
-| Über uns | Fotos der Gründer (ersetzen die Initialen DS / JM) |
 | Vertrauen | Echte Kundenstimmen und Logos ergänzen, sobald vorhanden (derzeit: „Noch keine Bewertungen“ + freie Plätze) |
 | Kontakt | Telefon, E-Mail (auch `tel:`/`mailto:`-Links!) |
 | Kontaktformular | Öffnet das E-Mail-Programm (mailto). Empfänger-Adresse `hallo@saarflow.example` in `index.html` ersetzen: im Formular (`action` + `data-mailto`) und beim E-Mail-Link im Kontaktbereich |

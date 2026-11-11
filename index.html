@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Saarflow – Websites für kleine Betriebe, gebaut und gepflegt</title>
+  <meta name="description" content="Saarflow baut die Website für Ihren Betrieb und kümmert sich danach um Hosting, Updates und Änderungen – zum festen Monatsbetrag. Aus dem Saarland.">
+  <meta name="theme-color" content="#F6F4EF">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./" aria-label="Saarflow – Startseite">
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 22c6 0 6-12 13-12s7 12 13 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+        <span>Saarflow</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="hauptnavigation">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menü</span>
+      </button>
+      <nav id="hauptnavigation" class="main-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#problem">Warum Saarflow</a></li>
+          <li><a href="#ablauf">So funktioniert's</a></li>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a class="btn btn-small" href="#kontakt">Erstgespräch vereinbaren</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhalt">
+
+    <!-- 1 · HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Websites für kleine Betriebe · Saarland</p>
+          <h1 id="hero-title">Wir bauen die Website für Ihren Betrieb. Und kümmern uns danach um alles.</h1>
+          <p class="lead">Saarflow erstellt Ihre Website, betreibt sie und hält sie aktuell: Hosting, Sicherheits-Updates, Änderungen. Sie zahlen einen festen Monatsbetrag statt einer großen Rechnung vorab und ändern Öffnungszeiten oder Angebote selbst in zwei Minuten.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#kontakt">Kostenloses Erstgespräch vereinbaren</a>
+            <a class="text-link" href="#ablauf">So funktioniert's <span aria-hidden="true">↓</span></a>
+          </div>
+          <dl class="facts">
+            <div><dt>Monatlich</dt><dd>ab <mark class="ph" title="Platzhalter">[XX] €</mark></dd></div>
+            <div><dt>Online in</dt><dd><mark class="ph" title="Platzhalter">[14]</mark> Tagen</dd></div>
+            <div><dt>Einrichtung</dt><dd><mark class="ph" title="Platzhalter">[0] €</mark></dd></div>
+          </dl>
+        </div>
+
+        <!-- Produktansicht (HTML/CSS-Mockup, kein Bild) -->
+        <div class="hero-visual reveal" role="img" aria-label="Produktansicht: links die Website einer Beispiel-Bäckerei auf dem Smartphone, rechts der Saarflow-Editor, in dem die Öffnungszeiten geändert werden.">
+          <div class="mock-editor" aria-hidden="true">
+            <div class="mock-bar"><span></span><span></span><span></span><em>app.saarflow.de</em></div>
+            <div class="mock-body">
+              <aside class="mock-side">
+                <b>Bäckerei Becker</b>
+                <ul>
+                  <li>Startseite</li>
+                  <li class="is-active">Öffnungszeiten</li>
+                  <li>Angebote</li>
+                  <li>Bilder</li>
+                  <li>Kontakt</li>
+                </ul>
+              </aside>
+              <div class="mock-main">
+                <p class="mock-label">Öffnungszeiten</p>
+                <div class="mock-row"><span>Mo – Fr</span><span class="mock-input">06:00 – 18:00</span></div>
+                <div class="mock-row"><span>Samstag</span><span class="mock-input">06:00 – 13:00</span></div>
+                <div class="mock-row"><span>Sonntag</span><span class="mock-input is-edit">07:30 – 11:00<i></i></span></div>
+                <div class="mock-row mock-note"><span>Hinweis</span><span class="mock-input">24.12. nur bis 12 Uhr</span></div>
+                <div class="mock-save"><span class="mock-status">Wird auf der Website angezeigt</span><span class="mock-btn">Speichern</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="mock-phone" aria-hidden="true">
+            <div class="phone-notch"></div>
+            <div class="phone-hero"><b>Bäckerei Becker</b><small>Dillingen · seit 1962</small></div>
+            <div class="phone-card">
+              <small>Heute geöffnet</small>
+              <b>07:30 – 11:00</b>
+            </div>
+            <div class="phone-lines"><i></i><i></i><i class="short"></i></div>
+            <div class="phone-cta">Anrufen</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · PROBLEM → LÖSUNG -->
+    <section id="problem" class="section problem" aria-labelledby="problem-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow"><span class="num">01</span> Problem → Lösung</p>
+          <h2 id="problem-title">Die meisten Betriebs-Websites werden einmal gebaut und dann vergessen.</h2>
+        </div>
+
+        <div class="compare">
+          <div class="compare-col reveal">
+            <h3>Heute</h3>
+            <ul class="list-x">
+              <li>Die Seite stammt von 2014 und ist auf dem Handy kaum lesbar.</li>
+              <li>Öffnungszeiten ändern heißt: die Agentur anrufen, Angebot abwarten, zahlen.</li>
+              <li>Niemand weiß mehr, wo das Passwort für Domain und Hosting liegt.</li>
+              <li>Plugins veralten, irgendwann zeigt der Browser „Nicht sicher“.</li>
+            </ul>
+          </div>
+          <div class="compare-col compare-col--after reveal">
+            <h3>Mit Saarflow</h3>
+            <ul class="list-check">
+              <li>Eine schnelle, mobile Website, gebaut nach Ihren Inhalten.</li>
+              <li>Öffnungszeiten, Angebote und Bilder ändern Sie selbst im Editor.</li>
+              <li>Domain, Hosting, SSL-Zertifikat und Backups laufen bei uns.</li>
+              <li>Updates und Sicherheit sind im Monatsbetrag enthalten.</li>
+            </ul>
+          </div>
+        </div>
+
+        <figure class="case reveal">
+          <p class="case-tag">Anwendungsbeispiel <mark class="ph">[Beispiel, fiktiv – durch echten Kundenfall ersetzen]</mark></p>
+          <blockquote>
+            <p>Bäckerei Becker in Dillingen backt für Ostern einen Sonntag länger. Freitagabend trägt die Inhaberin die neuen Zeiten am Handy ein – ohne Anruf, ohne Rechnung. Samstagfrüh stehen sie auf der Website und im Google-Unternehmensprofil.</p>
+          </blockquote>
+          <figcaption>Aufwand für den Betrieb: zwei Minuten. Aufwand für Technik: keiner.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 3 · SO FUNKTIONIERT'S -->
+    <section id="ablauf" class="section process" aria-labelledby="ablauf-title">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow"><span class="num">02</span> So funktioniert's</p>
+          <h2 id="ablauf-title">Vom ersten Gespräch zur fertigen Website in vier Schritten.</h2>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <div class="step-num" aria-hidden="true">01</div>
+            <div class="step-text">
+              <h3>Erstgespräch</h3>
+              <p>30 Minuten, telefonisch oder bei Ihnen vor Ort. Wir klären, was Ihr Betrieb anbietet, wer Ihre Kunden sind und was die Website leisten soll. Kostenlos und unverbindlich.</p>
+            </div>
+            <div class="step-ui" aria-hidden="true">
+              <div class="ui-chip">Fragebogen</div>
+              <div class="ui-lines"><i></i><i></i><i class="short"></i></div>
+              <div class="ui-check"><span>✓</span> Leistungen &nbsp;<span>✓</span> Einzugsgebiet &nbsp;<span>✓</span> Logo</div>
+            </div>
+          </li>
+          <li class="step reveal">
+            <div class="step-num" aria-hidden="true">02</div>
+            <div class="step-text">
+              <h3>Entwurf</h3>
+              <p>Wir schreiben die Texte mit Ihnen, wählen Bilder aus und bauen die Seite. Sie bekommen einen Vorschau-Link und sagen uns, was noch anders soll – zwei Korrekturrunden sind enthalten.</p>
+            </div>
+            <div class="step-ui" aria-hidden="true">
+              <div class="ui-chip">Vorschau</div>
+              <div class="ui-frame"><div class="ui-frame-hero"></div><div class="ui-lines"><i></i><i class="short"></i></div></div>
+              <div class="ui-comment">„Telefonnummer bitte größer“</div>
+            </div>
+          </li>
+          <li class="step reveal">
+            <div class="step-num" aria-hidden="true">03</div>
+            <div class="step-text">
+              <h3>Online gehen</h3>
+              <p>Wir verbinden Ihre Domain, richten SSL-Verschlüsselung und Backups ein und verknüpfen Ihr Google-Unternehmensprofil. Impressum und Datenschutzerklärung bereiten wir als Vorlage vor.</p>
+            </div>
+            <div class="step-ui" aria-hidden="true">
+              <div class="ui-chip">Status</div>
+              <div class="ui-status"><span class="dot"></span> www.baeckerei-becker.de ist online</div>
+              <div class="ui-status"><span class="dot"></span> SSL aktiv</div>
+              <div class="ui-status"><span class="dot"></span> Backup täglich 03:00</div>
+            </div>
+          </li>
+          <li class="step reveal">
+            <div class="step-num" aria-hidden="true">04</div>
+            <div class="step-text">
+              <h3>Laufender Betrieb</h3>
+              <p>Kleine Änderungen machen Sie selbst im Editor. Für alles Größere – eine neue Unterseite, ein Stellenangebot – schreiben Sie uns eine Nachricht. Updates und Sicherheit übernehmen wir im Hintergrund.</p>
+            </div>
+            <div class="step-ui" aria-hidden="true">
+              <div class="ui-chip">Anfrage</div>
+              <div class="ui-msg ui-msg--out">Wir suchen eine Verkäuferin, können Sie das online stellen?</div>
+              <div class="ui-msg">Ist erledigt – steht unter „Jobs“.</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- 4 · VERTRAUEN -->
+    <section id="ueber-uns" class="section about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow"><span class="num">03</span> Über uns</p>
+          <h2 id="about-title">Aus dem Saarland, für Betriebe aus der Region.</h2>
+          <p>Saarflow sitzt in <mark class="ph">[Ort, z. B. Saarbrücken]</mark>. Wir kennen die Betriebe hier: Handwerk, Gastronomie, Praxen, Einzelhandel. Wenig Zeit, viel zu tun – und eine Website, die einfach funktionieren soll.</p>
+          <p>Deshalb haben Sie bei uns eine feste Ansprechperson, die Sie anrufen können. Und wenn es passt, kommen wir auch vorbei.</p>
+          <p class="team-ph"><mark class="ph">[Platzhalter: Teamfoto oder Kurzvorstellung der Gründer:innen]</mark></p>
+        </div>
+        <div class="about-visual reveal" aria-hidden="true">
+          <!-- Abstrakte Linie, angelehnt an die Saarschleife -->
+          <svg viewBox="0 0 400 400" class="saarschleife">
+            <defs>
+              <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="currentColor" stroke-opacity=".12"/></pattern>
+            </defs>
+            <rect width="400" height="400" fill="url(#grid)"/>
+            <path class="river" d="M20 60 C140 40 220 80 250 150 C290 240 140 250 130 200 C120 150 240 120 300 200 C350 270 330 340 380 360" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="250" cy="150" r="6" class="pin"/>
+            <text x="262" y="146" class="svg-label">49°N 6.9°E</text>
+          </svg>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="proof">
+          <figure class="quote placeholder-box reveal">
+            <blockquote><p>„[Platzhalter für Kundenstimme: ein bis zwei Sätze, was sich durch die neue Website konkret verändert hat.]“</p></blockquote>
+            <figcaption>[Name], [Betrieb], [Ort]</figcaption>
+          </figure>
+          <figure class="quote placeholder-box reveal">
+            <blockquote><p>„[Platzhalter für Kundenstimme: z. B. weniger Anrufe wegen Öffnungszeiten, mehr Anfragen über das Formular.]“</p></blockquote>
+            <figcaption>[Name], [Betrieb], [Ort]</figcaption>
+          </figure>
+        </div>
+        <div class="logos reveal">
+          <p class="logos-label">Betriebe, die mit Saarflow arbeiten <mark class="ph">[Platzhalter]</mark></p>
+          <ul>
+            <li class="logo-ph">Logo 1</li><li class="logo-ph">Logo 2</li><li class="logo-ph">Logo 3</li><li class="logo-ph">Logo 4</li><li class="logo-ph">Logo 5</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · CTA + KONTAKT -->
+    <section id="kontakt" class="section contact" aria-labelledby="kontakt-title">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow eyebrow--light"><span class="num">04</span> Kontakt</p>
+          <h2 id="kontakt-title">Sprechen wir 30 Minuten über Ihre Website.</h2>
+          <p>Kostenlos und unverbindlich. Danach wissen Sie, wie Ihre Seite aussehen könnte, was sie kostet und wann sie online ist.</p>
+          <dl class="contact-data">
+            <div><dt>Telefon</dt><dd><a href="tel:+490000000000"><mark class="ph ph--dark">[0681 000000]</mark></a></dd></div>
+            <div><dt>E-Mail</dt><dd><a href="mailto:hallo@saarflow.example"><mark class="ph ph--dark">[hallo@saarflow.de]</mark></a></dd></div>
+            <div><dt>Adresse</dt><dd><mark class="ph ph--dark">[Straße Nr., 66XXX Ort]</mark></dd></div>
+          </dl>
+        </div>
+
+        <form class="contact-form" action="#" method="post" novalidate data-placeholder-form>
+          <!-- PLATZHALTER: Formular ist noch an keinen Versanddienst angebunden -->
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="betrieb">Betrieb <span class="optional">(optional)</span></label>
+            <input id="betrieb" name="betrieb" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="email">E-Mail oder Telefon</label>
+            <input id="email" name="kontakt" type="text" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="nachricht">Worum geht es? <span class="optional">(optional)</span></label>
+            <textarea id="nachricht" name="nachricht" rows="4" placeholder="z. B. Wir haben noch keine Website / unsere ist veraltet"></textarea>
+          </div>
+          <div class="field field-check">
+            <input id="datenschutz" name="datenschutz" type="checkbox" required>
+            <label for="datenschutz">Ich bin einverstanden, dass meine Angaben zur Beantwortung meiner Anfrage verarbeitet werden. Details in der <a href="datenschutz.html">Datenschutzerklärung</a>.</label>
+          </div>
+          <button class="btn btn-light" type="submit">Erstgespräch anfragen</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="logo logo--small"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 22c6 0 6-12 13-12s7 12 13 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg> Saarflow</p>
+      <p class="footer-claim">Websites für kleine Betriebe. Gebaut und gepflegt im Saarland.</p>
+      <nav aria-label="Rechtliches">
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </nav>
+      <p class="copyright">© 2026 Saarflow <mark class="ph ph--dark">[Rechtsform]</mark></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

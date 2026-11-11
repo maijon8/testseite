@@ -67,8 +67,8 @@
         return;
       }
 
-      var v = function (name) { return form.elements[name].value.trim(); };
-      var name = v('name'), betrieb = v('betrieb'), kontakt = v('kontakt'), nachricht = v('nachricht');
+      var v = function (id) { return document.getElementById(id).value.trim(); };
+      var name = v('name'), betrieb = v('betrieb'), kontakt = v('email'), nachricht = v('nachricht');
 
       var subject = 'Anfrage Erstgespräch – ' + (betrieb || name);
       var body = [

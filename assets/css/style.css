@@ -354,6 +354,7 @@ html:not(.js) .nav-toggle { display: none; }
 .plan-for { color: var(--ink-2); margin: 0; }
 .plan-list { flex: 1; margin-bottom: 2rem; }
 .plan-list li { position: relative; padding: .6rem 0 .6rem 1.75rem; }
+.plan-list li strong { font-weight: 600; }
 .plan-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-family: var(--f-mono); }
 .plan-option { color: var(--ink-2); }
 .plan-option::before { content: "+" !important; }
@@ -368,7 +369,8 @@ html:not(.js) .nav-toggle { display: none; }
 .plan-common dd strong { color: var(--on-dark); }
 .plan-note { margin: 1.75rem 0 0; font-size: .875rem; }
 .plan-note .ph { background: rgba(240, 122, 62, .14); outline-color: var(--accent-on-dark); color: var(--on-dark); }
-@media (min-width: 900px) { .plan-common dl { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; } }
+@media (min-width: 700px) { .plan-common dl { grid-template-columns: repeat(2, 1fr); gap: 1.75rem 2.5rem; } }
+@media (min-width: 1100px) { .plan-common dl { grid-template-columns: repeat(4, 1fr); } }
 
 /* ---------- Über uns / Vertrauen ---------- */
 .about { background: var(--paper-2); }
@@ -572,3 +574,4 @@ html:not(.js) .nav-toggle { display: none; }
 @media (min-width: 1100px) { .plan-checks ul { grid-template-columns: repeat(3, 1fr); } }
 .plan-checks-note { margin: 1.25rem 0 0; font-size: .875rem; color: var(--on-dark-2); }
 .a11y-contrast .site-header { background: #fff; }
+.nowrap { white-space: nowrap; }

@@ -53,6 +53,14 @@
     });
   });
 
+  function fallbackCopy(text) {
+    var ta = document.createElement('textarea');
+    ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } catch (e) {}
+    document.body.removeChild(ta);
+  }
+
   // Kontaktformular – öffnet das E-Mail-Programm mit vorausgefüllter Nachricht (mailto)
   var form = document.querySelector('[data-contact-form]');
   if (form) {
@@ -94,16 +102,40 @@
         '',
         'Viele Grüße',
         name
-      ].join('\r\n');
+      ].join('\n');
 
-      window.location.href = 'mailto:' + to +
-        '?subject=' + encodeURIComponent(subject) +
-        '&body=' + encodeURIComponent(body);
+      var enc = encodeURIComponent;
+      window.location.href = 'mailto:' + to + '?subject=' + enc(subject) + '&body=' + enc(body);
 
       form.querySelectorAll('[aria-invalid]').forEach(function (f) { f.removeAttribute('aria-invalid'); });
+
+      // Ausweichweg: Webmail (z. B. Gmail im Browser) übernimmt mailto-Text nicht immer
+      var gmail = 'https://mail.google.com/mail/?view=cm&fs=1&to=' + enc(to) + '&su=' + enc(subject) + '&body=' + enc(body);
       status.className = 'form-status is-success';
-      status.textContent = 'Ihr E-Mail-Programm sollte sich jetzt geöffnet haben – bitte dort auf „Senden“ klicken. ' +
-        'Falls nicht, schreiben Sie uns direkt an ' + to + '.';
+      status.innerHTML = '';
+      var p1 = document.createElement('p');
+      p1.textContent = 'Ihr E-Mail-Programm sollte sich jetzt geöffnet haben – bitte dort auf „Senden“ klicken.';
+      var p2 = document.createElement('p');
+      p2.textContent = 'Die Nachricht ist leer oder es hat sich nichts geöffnet?';
+      var actions = document.createElement('div');
+      actions.className = 'form-fallback';
+      var a = document.createElement('a');
+      a.className = 'btn btn-small';
+      a.href = gmail; a.target = '_blank'; a.rel = 'noopener';
+      a.textContent = 'In Gmail öffnen';
+      var copy = document.createElement('button');
+      copy.type = 'button';
+      copy.className = 'btn btn-small btn-ghost';
+      copy.textContent = 'Nachricht kopieren';
+      copy.addEventListener('click', function () {
+        var text = 'An: ' + to + '\nBetreff: ' + subject + '\n\n' + body;
+        var done = function () { copy.textContent = 'Kopiert – jetzt in eine E-Mail an ' + to + ' einfügen'; };
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text); done(); });
+        } else { fallbackCopy(text); done(); }
+      });
+      actions.appendChild(a); actions.appendChild(copy);
+      status.appendChild(p1); status.appendChild(p2); status.appendChild(actions);
     });
   }
 })();

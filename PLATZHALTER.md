@@ -5,7 +5,6 @@ Auf der Seite sind verbleibende Platzhalter orange-gestrichelt markiert (`<mark 
 ## Startseite (`index.html`)
 | Bereich | Offen |
 |---|---|
-| Problem → Lösung | Anwendungsbeispiel „Bäckerei Becker“ ist fiktiv → durch echten Kundenfall ersetzen |
 | Hero-Mockup | Kundenportal-Ansicht ist nachgebaut, nicht das echte Portal; „Bäckerei Becker“ ist fiktiv |
 | Fotos (Zusatzleistung) | Nutzungsrechte der Bilder für Kunden vertraglich regeln |
 | Vertrauen | Echte Kundenstimmen und Logos ergänzen, sobald vorhanden |

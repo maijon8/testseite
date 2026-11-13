@@ -312,7 +312,6 @@ html:not(.js) .nav-toggle { display: none; }
 .why-close { margin-top: clamp(3rem, 2rem + 4vw, 5rem); display: grid; gap: 1.25rem; }
 .why-statement { font-family: var(--f-display); font-weight: 650; font-size: clamp(1.6rem, 1.2rem + 2vw, 2.6rem); line-height: 1.15; letter-spacing: -0.02em; margin: 0; }
 .why-statement::before { content: ""; display: block; width: 3.5rem; height: 4px; background: var(--accent); margin-bottom: 1.5rem; }
-.why-note { margin: 0; color: var(--ink-2); max-width: 34rem; }
 @media (min-width: 960px) { .why-close { grid-template-columns: 7fr 5fr; gap: 5rem; align-items: end; } }
 
 /* ---------- Ablauf ---------- */
@@ -347,7 +346,6 @@ html:not(.js) .nav-toggle { display: none; }
 .extra h3 { font-size: clamp(1.4rem, 1.1rem + 1.2vw, 2rem); line-height: 1.15; }
 .extra-body p { color: var(--ink-2); max-width: 40rem; }
 .extra-body p:last-child { margin-bottom: 0; }
-.extra-price strong { color: var(--ink); }
 @media (min-width: 900px) { .extra-body { grid-template-columns: 5fr 7fr; column-gap: clamp(2rem, 4vw, 4rem); } }
 
 /* ---------- Preise ---------- */
@@ -383,8 +381,7 @@ html:not(.js) .nav-toggle { display: none; }
 .plan-common dd strong { color: var(--on-dark); }
 .plan-note { margin: 1.75rem 0 0; font-size: .875rem; }
 .plan-note .ph { background: rgba(240, 122, 62, .14); outline-color: var(--accent-on-dark); color: var(--on-dark); }
-@media (min-width: 700px) { .plan-common dl { grid-template-columns: repeat(2, 1fr); gap: 1.75rem 2.5rem; } }
-@media (min-width: 1100px) { .plan-common dl { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 900px) { .plan-common dl { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; } }
 
 /* ---------- Über uns / Vertrauen ---------- */
 .about { background: var(--paper-2); }
@@ -403,10 +400,6 @@ html:not(.js) .nav-toggle { display: none; }
 .founder-photo span::after { content: "."; color: var(--accent); }
 .founder-name { font-family: var(--f-display); font-weight: 650; font-size: 1.15rem; margin: 0; }
 .founder-role { font-family: var(--f-mono); font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-2); margin: .2rem 0 0; }
-.about-facts { margin: 2rem 0 0; display: grid; border-top: 1px solid var(--ink); }
-.about-facts div { display: grid; grid-template-columns: 8.5rem 1fr; gap: 1rem; padding: .8rem 0; border-bottom: 1px solid var(--line); }
-.about-facts dt { font-family: var(--f-mono); font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-2); padding-top: .2rem; }
-.about-facts dd { margin: 0; font-weight: 500; }
 
 /* Erste Kunden / freie Plätze */
 .first-clients { display: grid; gap: 2.5rem; margin-top: clamp(4rem, 3rem + 4vw, 6rem); padding-top: clamp(2.5rem, 2rem + 2vw, 4rem); border-top: 1px solid var(--line); }
@@ -589,3 +582,4 @@ html:not(.js) .nav-toggle { display: none; }
 .plan-checks-note { margin: 1.25rem 0 0; font-size: .875rem; color: var(--on-dark-2); }
 .a11y-contrast .site-header { background: #fff; }
 .nowrap { white-space: nowrap; }
+.extra--pricing { margin-top: 1.5rem; }

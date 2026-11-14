@@ -196,7 +196,7 @@ html:not(.js) .nav-toggle { display: none; }
 @media (min-width: 520px) { .hero-actions .btn { width: auto; } }
 
 .facts { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 1.25rem clamp(1.25rem, 3vw, 2.25rem); margin: 3rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--line); }
-@media (max-width: 359px) { .facts { grid-template-columns: repeat(2, auto); } }
+@media (max-width: 479px) { .facts { grid-template-columns: repeat(2, auto); } }
 .facts dt { font-family: var(--f-mono); font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-2); }
 .facts dd { margin: .25rem 0 0; font-family: var(--f-display); font-size: clamp(1.1rem, 1rem + .45vw, 1.35rem); font-weight: 600; white-space: nowrap; }
 
@@ -378,8 +378,9 @@ html:not(.js) .nav-toggle { display: none; }
 .plan-common dd { margin: 0; color: var(--on-dark-2); }
 .plan-common dd strong { color: var(--on-dark); }
 .plan-note { margin: 1.75rem 0 0; font-size: .875rem; }
+.plan-note a { color: var(--on-dark); font-weight: 600; }
 .plan-note .ph { background: rgba(240, 122, 62, .14); outline-color: var(--accent-on-dark); color: var(--on-dark); }
-@media (min-width: 900px) { .plan-common dl { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; } }
+@media (min-width: 700px) { .plan-common dl { grid-template-columns: repeat(2, 1fr); gap: 1.75rem 3rem; } }
 
 /* ---------- Über uns / Vertrauen ---------- */
 .about { background: var(--paper-2); }
@@ -613,3 +614,20 @@ html:not(.js) .nav-toggle { display: none; }
 /* Ansprechpartner: eine Karte */
 .founders--single { grid-template-columns: minmax(0, 18rem); }
 @media (min-width: 900px) { .founders--single { justify-content: end; } }
+
+/* Bereichs-Umschalter im Header (Webdesign / KI-Automatisierung) */
+.nav-portal { margin-top: .75rem; width: 100%; }
+@media (min-width: 760px) {
+  .header-inner { position: relative; }
+  .main-nav, .js .main-nav:not(.is-open) { display: flex; align-items: center; }
+  .main-nav .nav-switch { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); gap: .25rem; padding: .3rem; background: #fff; border: 1px solid var(--line); border-radius: 999px; }
+  .main-nav .nav-switch a { display: block; padding: .55rem 1.15rem; border-radius: 999px; font-weight: 600; font-size: .9375rem; color: var(--ink-2); transition: background-color .15s ease, color .15s ease; }
+  .main-nav .nav-switch a:hover { color: var(--ink); background: var(--paper-2); }
+  .main-nav .nav-switch a[aria-current="page"] { background: var(--ink); color: var(--paper); box-shadow: none; padding-left: 1.15rem; }
+  .nav-portal { margin: 0; width: auto; }
+}
+.legal h1, .legal h2, .legal h3, .legal p { overflow-wrap: break-word; hyphens: auto; }
+
+/* Paketnamen groß, seit die Preise entfallen sind */
+.plan h3 { font-family: var(--f-display); font-weight: 650; font-size: clamp(2rem, 1.5rem + 2vw, 2.9rem); text-transform: none; letter-spacing: -0.025em; line-height: 1.05; color: var(--ink); margin-bottom: .9rem; }
+.plan--premium h3 { color: var(--accent); }

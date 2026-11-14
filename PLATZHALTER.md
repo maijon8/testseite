@@ -15,3 +15,10 @@ Auf der Seite sind verbleibende Platzhalter orange-gestrichelt markiert (`<mark 
 - Auftragsverarbeitungsvertrag (AVV) mit ALL-INKL.COM im KAS abschließen
 - AVV/DPA mit Vercel (Kundenportal) abschließen
 - SSL-Zertifikat im KAS aktivieren, danach HTTPS-Weiterleitung einschalten
+
+## KI-Automatisierung (`ki-automatisierung.html`)
+- Einsatzbeispiele und Ablauf mit Dennis abstimmen – nur anbieten, was wirklich umgesetzt werden kann
+- Preise / Preismodell für KI-Projekte ergänzen, sobald festgelegt
+- Datenschutz: eingesetzte KI-Dienste (z. B. OpenAI, Anthropic, Mistral) in der Datenschutzerklärung der jeweiligen Kunden-Lösung berücksichtigen; AVV mit jedem Dienst
+- Gewerbeanmeldung um „KI-Automatisierung / Softwaredienstleistungen“ erweitern (Gewerbeummeldung)
+- Foto von Dennis ersetzt später die Initialen

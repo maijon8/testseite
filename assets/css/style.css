@@ -170,17 +170,18 @@ img, svg { display: block; max-width: 100%; }
 .main-nav ul { display: flex; flex-direction: column; gap: .25rem; }
 .main-nav a:not(.btn) { display: block; padding: .75rem 0; text-decoration: none; font-weight: 500; }
 .main-nav .btn { margin-top: .5rem; width: 100%; }
+.main-nav a[aria-current="page"] { color: var(--ink); font-weight: 650; box-shadow: inset 3px 0 0 var(--accent); padding-left: .85rem; }
 .js .main-nav:not(.is-open) { display: none; }
 html:not(.js) .main-nav { display: block; position: static; padding: 0; border: 0; }
 html:not(.js) .nav-toggle { display: none; }
 
-@media (min-width: 1040px) {
+@media (min-width: 760px) {
   .nav-toggle { display: none; }
   .main-nav, .js .main-nav:not(.is-open) { display: block; position: static; padding: 0; border: 0; background: none; }
   .main-nav ul { flex-direction: row; align-items: center; gap: 1.75rem; }
   .main-nav a:not(.btn) { padding: .5rem 0; font-size: .9375rem; }
+  .main-nav a[aria-current="page"] { box-shadow: inset 0 -2px 0 var(--accent); padding-left: 0; }
   .main-nav .btn { margin: 0; width: auto; }
-  .main-nav li:has(.btn-outline) { margin-left: .5rem; }
 }
 
 /* ---------- Hero ---------- */
@@ -580,3 +581,35 @@ html:not(.js) .nav-toggle { display: none; }
 .a11y-contrast .site-header { background: #fff; }
 .nowrap { white-space: nowrap; }
 .extra--pricing { margin-top: 1.5rem; }
+
+/* ==========================================================================
+   KI-Automatisierung
+   ========================================================================== */
+/* Ablauf-Mockup im Hero */
+.flow { position: relative; display: grid; gap: .9rem; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: clamp(1.1rem, .8rem + 1.5vw, 1.75rem); box-shadow: 0 30px 60px -30px rgba(22, 24, 26, .25); }
+.flow::before { content: ""; position: absolute; left: calc(clamp(1.1rem, .8rem + 1.5vw, 1.75rem) + 1.25rem); top: 2.5rem; bottom: 2.5rem; width: 1px; background: var(--line); }
+.flow-step { position: relative; display: grid; grid-template-columns: 2.5rem 1fr; gap: .9rem; align-items: start; padding: .85rem 1rem .85rem .85rem; border: 1px solid #ECE9E2; border-radius: 8px; background: #FAF9F6; }
+.flow-step small { display: block; font-family: var(--f-mono); font-size: .6875rem; text-transform: uppercase; letter-spacing: .04em; color: #6B6F73; margin-bottom: .2rem; }
+.flow-step b { display: block; font-weight: 600; font-size: .9375rem; line-height: 1.4; }
+.flow-icon { position: relative; z-index: 1; width: 2.5rem; height: 2.5rem; display: grid; place-items: center; border-radius: 50%; background: #fff; border: 1px solid var(--line); }
+.flow-icon svg { width: 1.2rem; height: 1.2rem; fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.flow-icon--ai { background: var(--accent-soft); border-color: var(--accent); }
+.flow-icon--ai svg { stroke: var(--accent); }
+.flow-icon--done { background: var(--ink); border-color: var(--ink); }
+.flow-icon--done svg { stroke: #fff; }
+.flow-step--done { background: #fff; border-color: var(--ink); }
+.flow-btn { display: inline-block; margin-top: .6rem; background: var(--accent); color: #fff; font-weight: 600; font-size: .75rem; padding: .4rem .75rem; border-radius: 4px; }
+@media (min-width: 1024px) { .flow { margin-left: 2rem; } }
+
+/* Einsatzbereiche */
+.uses { border-top: 1px solid var(--ink); }
+.uses li { display: grid; gap: .6rem; padding-block: clamp(1.5rem, 1rem + 1.5vw, 2.25rem); border-bottom: 1px solid var(--line); }
+.uses h3 { font-size: clamp(1.5rem, 1.15rem + 1.6vw, 2.4rem); line-height: 1.1; letter-spacing: -0.02em; display: flex; align-items: baseline; gap: 1rem; }
+.uses .online-num { color: var(--accent); }
+.uses p { margin: 0; color: var(--ink-2); max-width: 36rem; }
+@media (min-width: 960px) { .uses li { grid-template-columns: 6fr 5fr; gap: 4rem; align-items: center; } }
+.uses-note { margin: 2rem 0 0; color: var(--ink-2); max-width: 40rem; }
+
+/* Ansprechpartner: eine Karte */
+.founders--single { grid-template-columns: minmax(0, 18rem); }
+@media (min-width: 900px) { .founders--single { justify-content: end; } }

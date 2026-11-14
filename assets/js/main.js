@@ -86,16 +86,19 @@
       var v = function (id) { return document.getElementById(id).value.trim(); };
       var name = v('name'), betrieb = v('betrieb'), kontakt = v('email'), nachricht = v('nachricht'), paket = v('paket');
 
-      var subject = 'Anfrage Erstgespräch' + (paket ? ' (' + paket + ')' : '') + ' – ' + (betrieb || name);
+      var topic = form.getAttribute('data-topic') || 'Webdesign';
+      var sel = document.getElementById('paket');
+      var paketText = paket ? sel.options[sel.selectedIndex].text : '';
+      var subject = 'Anfrage ' + topic + (paket ? ' (' + paket + ')' : '') + ' – ' + (betrieb || name);
       var body = [
         'Hallo Saarflow-Team,',
         '',
-        'ich interessiere mich für ein kostenloses Erstgespräch.',
+        'ich interessiere mich für ein kostenloses Erstgespräch zum Thema ' + topic + '.',
         '',
         'Name: ' + name,
         'Betrieb: ' + (betrieb || '–'),
         'Erreichbar unter: ' + kontakt,
-        'Interesse an: ' + (paket ? 'Paket ' + paket : 'noch unsicher – bitte beraten Sie mich'),
+        'Interesse an: ' + (paket ? paketText : 'noch unsicher – bitte beraten Sie mich'),
         '',
         'Worum es geht:',
         nachricht || '–',

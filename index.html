@@ -20,10 +20,10 @@
   <meta name="theme-color" content="#F6F4EF">
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=25">
+  <link rel="stylesheet" href="assets/css/style.css?v=26">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://saarflow.info/#unternehmen","name":"Saarflow","legalName":"Mailänder & Scholl GbR","url":"https://saarflow.info/","logo":"https://saarflow.info/assets/img/icon-512.png","image":"https://saarflow.info/assets/img/og-saarflow.png","description":"Webdesign und Digitalisierung für kleine Betriebe aus dem Saarland: Website zum Festpreis, Hosting, Updates und Änderungen inklusive.","email":"kontakt@saarflow.info","address":{"@type":"PostalAddress","addressLocality":"Ensdorf","postalCode":"66806","addressRegion":"Saarland","addressCountry":"DE"},"areaServed":{"@type":"State","name":"Saarland"},"founder":[{"@type":"Person","name":"Jonas Mailänder","jobTitle":"Gründer, Webdesign"},{"@type":"Person","name":"Dennis Scholl","jobTitle":"Gründer, Digitalisierung"}],"knowsAbout":["Webdesign","Website-Erstellung","Hosting","Digitalisierung","Automatisierung mit KI"]},{"@type":"WebSite","@id":"https://saarflow.info/#website","url":"https://saarflow.info/","name":"Saarflow","inLanguage":"de","publisher":{"@id":"https://saarflow.info/#unternehmen"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"ProfessionalService","@id":"https://saarflow.info/#unternehmen","name":"Saarflow","legalName":"Mailänder & Scholl GbR","url":"https://saarflow.info/","logo":"https://saarflow.info/assets/img/icon-512.png","image":"https://saarflow.info/assets/img/og-saarflow.png","description":"Webdesign und Digitalisierung für kleine Betriebe aus dem Saarland: Website zum Festpreis, Hosting, Updates und Änderungen inklusive.","email":"kontakt@saarflow.info","address":{"@type":"PostalAddress","addressLocality":"Ensdorf","postalCode":"66806","addressRegion":"Saarland","addressCountry":"DE"},"areaServed":{"@type":"State","name":"Saarland"},"founder":[{"@type":"Person","name":"Jonas Mailänder","jobTitle":"Gründer, Webdesign"},{"@type":"Person","name":"Dennis Scholl","jobTitle":"Gründer, Digitalisierung"}],"knowsAbout":["Webdesign","Website-Erstellung","Hosting","Online-Terminbuchung","Digitalisierung","Automatisierung mit KI"]},{"@type":"WebSite","@id":"https://saarflow.info/#website","url":"https://saarflow.info/","name":"Saarflow","inLanguage":"de","publisher":{"@id":"https://saarflow.info/#unternehmen"}}]}</script>
   <script>(function(d){d.classList.add('js');try{var a=JSON.parse(localStorage.getItem('sf-a11y')||'{}');if(a.font)d.classList.add('a11y-font-'+a.font);for(var k in a){if(k!=='font'&&a[k])d.classList.add('a11y-'+k)}}catch(e){}})(document.documentElement)</script>
 </head>
 <body>
@@ -131,7 +131,14 @@
           </li>
           <li class="reveal">
             <h3><span class="online-num" aria-hidden="true">03</span>Rund um die Uhr.</h3>
-            <p>Ihr Betrieb hat Öffnungszeiten, Ihre Website nicht. Sie beantwortet Fragen und gewinnt Kunden – auch wenn Sie längst Feierabend haben.</p>
+            <div>
+              <p>Ihr Betrieb hat Öffnungszeiten, Ihre Website nicht. Sie beantwortet Fragen und nimmt auf Wunsch sogar Termine an – auch wenn Sie längst Feierabend haben.</p>
+              <div class="night-booking" role="img" aria-label="Beispiel: Um 22:47 Uhr bucht ein Kunde online einen Termin für Samstag, 10:30 Uhr. Der Termin steht sofort im Kalender.">
+                <span class="nb-time" aria-hidden="true">22:47</span>
+                <span class="nb-text" aria-hidden="true"><b>Neue Online-Buchung</b>Samstag, 10:30 Uhr · Herrenschnitt</span>
+                <span class="nb-state" aria-hidden="true">im Kalender</span>
+              </div>
+            </div>
           </li>
           <li class="reveal">
             <h3><span class="online-num" aria-hidden="true">04</span>Der erste Eindruck.</h3>
@@ -262,6 +269,27 @@
             <div>
               <p>Auf Wunsch kommen wir mit Kamera zu Ihnen und fotografieren Werkstatt, Team und Ihre Arbeiten. So zeigt Ihre Website echte Menschen und echte Projekte statt Stockfotos – das schafft Vertrauen, bevor der erste Anruf kommt.</p>
               <p>Die Bilder können Sie auch für Ihr Google-Unternehmensprofil, Social Media oder Flyer verwenden.</p>
+            </div>
+          </div>
+        </aside>
+
+        <aside class="extra extra--pricing reveal" aria-labelledby="buchung-title">
+          <p class="eyebrow">Zusatzleistung</p>
+          <div class="extra-body">
+            <h3 id="buchung-title">Online-Terminbuchung für Ihre Website</h3>
+            <div>
+              <p>Ihre Kunden suchen sich selbst einen freien Termin aus – abends, am Wochenende, ohne Anruf. Der Termin steht danach in Ihrem Kalender, Ihr Kunde bekommt eine Bestätigung per E-Mail.</p>
+              <div class="try" data-try-booking>
+                <p class="try-label" id="try-label">So fühlt sich das für Ihre Kunden an – tippen Sie auf einen freien Termin:</p>
+                <div class="try-slots" role="group" aria-labelledby="try-label">
+                  <button type="button" aria-pressed="false" data-when="Donnerstag, 09:30 Uhr">Do · 09:30</button>
+                  <button type="button" aria-pressed="false" data-when="Donnerstag, 14:00 Uhr">Do · 14:00</button>
+                  <button type="button" disabled>Fr · 10:00 <span class="visually-hidden">(belegt)</span></button>
+                  <button type="button" aria-pressed="false" data-when="Freitag, 16:30 Uhr">Fr · 16:30</button>
+                </div>
+                <p class="try-status" role="status"></p>
+              </div>
+              <p>Die Buchung läuft direkt auf Ihrer Website – ohne Buchungsportal und ohne Provision pro Termin. <a href="demo-salon.html#termin">Ganze Buchung in der Salon-Demo ausprobieren</a></p>
             </div>
           </div>
         </aside>
@@ -421,6 +449,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=25" defer></script>
+  <script src="assets/js/main.js?v=26" defer></script>
 </body>
 </html>

@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Salon Nora – Beispiel-Website von Saarflow</title>
-  <meta name="description" content="Beispiel-Website von Saarflow für einen Friseursalon: Leistungen und Preise, Team, Öffnungszeiten und Terminanfrage. Der Betrieb ist frei erfunden.">
+  <meta name="description" content="Beispiel-Website von Saarflow für einen Friseursalon: Leistungen und Preise, Team, Öffnungszeiten und Online-Terminbuchung. Der Betrieb ist frei erfunden.">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#F6ECE6">
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/demo-sites.css?v=25">
+  <link rel="stylesheet" href="assets/css/demo-sites.css?v=26">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -35,7 +35,7 @@
           <li><a href="#stimmen">Stimmen</a></li>
           <li><a href="#kontakt">Kontakt</a></li>
         </ul>
-        <a class="btn btn--small" href="#kontakt">Termin anfragen</a>
+        <a class="btn btn--small" href="#termin">Termin buchen</a>
       </nav>
     </div>
   </header>
@@ -47,8 +47,8 @@
         <div class="s-hero-copy">
           <p class="kicker">Damen · Herren · Kinder</p>
           <h1 id="hero-title">Zeit für einen neuen Schnitt.</h1>
-          <p class="lead">Schneiden, Farbe und Styling in entspannter Atmosphäre. Termine nach Vereinbarung – donnerstags auch abends.</p>
-          <p class="actions"><a class="btn" href="#kontakt">Termin anfragen</a></p>
+          <p class="lead">Schneiden, Farbe und Styling in entspannter Atmosphäre. Termine buchen Sie online, wann es Ihnen passt – donnerstags sind wir auch abends da.</p>
+          <p class="actions"><a class="btn" href="#termin">Termin online buchen</a></p>
         </div>
         <div class="s-shape s-shape--r" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 34h84v22H18zM28 56v34M39 56v34M50 56v34M61 56v34M72 56v34M83 56v34M94 56v34"/></svg></div>
       </div>
@@ -119,7 +119,7 @@
     <section id="kontakt" class="sec s-white" aria-labelledby="kontakt-title">
       <div class="wrap s-contact-grid">
         <div>
-          <p class="kicker">Kontakt und Öffnungszeiten</p>
+          <p class="kicker">Termin und Öffnungszeiten</p>
           <h2 id="kontakt-title">Wann dürfen wir Sie begrüßen?</h2>
           <dl class="hours">
             <div><dt>Dienstag – Freitag</dt><dd>09:00 – 18:00</dd></div>
@@ -129,6 +129,8 @@
           </dl>
           <address class="addr"><strong>Salon Nora</strong><br>Mustergasse 3 · 66000 Musterstadt<br>Telefon 06831 000 000</address>
         </div>
+        <div id="termin" data-booking="{&quot;title&quot;:&quot;Termin online buchen&quot;,&quot;serviceLabel&quot;:&quot;Was dürfen wir für Sie tun?&quot;,&quot;staffLabel&quot;:&quot;Bei wem?&quot;,&quot;submit&quot;:&quot;Termin buchen&quot;,&quot;services&quot;:[{&quot;name&quot;:&quot;Waschen, Schneiden, Föhnen&quot;,&quot;info&quot;:&quot;60 Min. · ab 42 €&quot;},{&quot;name&quot;:&quot;Herrenschnitt&quot;,&quot;info&quot;:&quot;30 Min. · ab 24 €&quot;},{&quot;name&quot;:&quot;Farbe oder Strähnen&quot;,&quot;info&quot;:&quot;120 Min. · ab 39 €&quot;},{&quot;name&quot;:&quot;Kinderschnitt&quot;,&quot;info&quot;:&quot;30 Min. · ab 14 €&quot;}],&quot;staff&quot;:[&quot;Egal, wer frei ist&quot;,&quot;Nora&quot;,&quot;Lea&quot;,&quot;Tim&quot;],&quot;open&quot;:{&quot;2&quot;:[&quot;09:00&quot;,&quot;17:30&quot;],&quot;3&quot;:[&quot;09:00&quot;,&quot;17:30&quot;],&quot;4&quot;:[&quot;09:00&quot;,&quot;19:30&quot;],&quot;5&quot;:[&quot;09:00&quot;,&quot;17:30&quot;],&quot;6&quot;:[&quot;08:00&quot;,&quot;13:30&quot;]},&quot;step&quot;:30,&quot;fields&quot;:[{&quot;id&quot;:&quot;name&quot;,&quot;label&quot;:&quot;Name&quot;,&quot;autocomplete&quot;:&quot;name&quot;},{&quot;id&quot;:&quot;tel&quot;,&quot;label&quot;:&quot;Telefon&quot;,&quot;type&quot;:&quot;tel&quot;,&quot;autocomplete&quot;:&quot;tel&quot;},{&quot;id&quot;:&quot;mail&quot;,&quot;label&quot;:&quot;E-Mail für die Bestätigung (optional)&quot;,&quot;type&quot;:&quot;email&quot;,&quot;autocomplete&quot;:&quot;email&quot;,&quot;optional&quot;:true}]}">
+        <div class="card-form book book-pre" inert><h3 class="book-title">Termin online buchen</h3><ol class="book-steps"><li class="is-current">Leistung</li><li>Termin</li><li>Daten</li></ol><div class="book-panel"><fieldset><legend>Was dürfen wir für Sie tun?</legend><div class="book-list"><label class="book-opt"><input type="radio" name="s-pre-s"><span><b>Waschen, Schneiden, Föhnen</b><small>60 Min. · ab 42 €</small></span></label><label class="book-opt"><input type="radio" name="s-pre-s"><span><b>Herrenschnitt</b><small>30 Min. · ab 24 €</small></span></label><label class="book-opt"><input type="radio" name="s-pre-s"><span><b>Farbe oder Strähnen</b><small>120 Min. · ab 39 €</small></span></label><label class="book-opt"><input type="radio" name="s-pre-s"><span><b>Kinderschnitt</b><small>30 Min. · ab 14 €</small></span></label></div></fieldset><fieldset><legend>Bei wem?</legend><div class="book-chips book-chips--wide"><label class="book-opt"><input type="radio" name="s-pre-w" checked><span><b>Egal, wer frei ist</b></span></label><label class="book-opt"><input type="radio" name="s-pre-w"><span><b>Nora</b></span></label><label class="book-opt"><input type="radio" name="s-pre-w"><span><b>Lea</b></span></label><label class="book-opt"><input type="radio" name="s-pre-w"><span><b>Tim</b></span></label></div></fieldset></div><p class="book-summary"></p><div class="book-actions"><button type="button" class="btn" aria-disabled="true">Weiter</button></div><p class="form-note">Beispiel-Buchung: Es wird nichts gespeichert oder gesendet.</p></div>
         <form class="card-form" data-demo-form novalidate aria-labelledby="form-title">
           <h3 id="form-title">Termin anfragen</h3>
           <div class="f"><label for="s-name">Name</label><input id="s-name" type="text" autocomplete="name"></div>
@@ -138,6 +140,7 @@
           <button class="btn" type="submit">Termin anfragen</button>
           <p class="form-note" role="status">Wir rufen zurück und bestätigen Ihren Termin.</p>
         </form>
+        </div>
       </div>
     </section>
   </main>
@@ -151,6 +154,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/demo.js?v=25" defer></script>
+  <script src="assets/js/demo.js?v=26" defer></script>
 </body>
 </html>

@@ -628,3 +628,29 @@ html:not(.js) .nav-toggle { display: none; }
 /* Paketnamen groß, seit die Preise entfallen sind */
 .plan h3 { font-family: var(--f-display); font-weight: 650; font-size: clamp(2rem, 1.5rem + 2vw, 2.9rem); text-transform: none; letter-spacing: -0.025em; line-height: 1.05; color: var(--ink); margin-bottom: .9rem; }
 .plan--premium h3 { color: var(--accent); }
+
+
+/* ---------- Online-Terminbuchung auf der Startseite ---------- */
+/* Benachrichtigung im Abschnitt "Rund um die Uhr" */
+.night-booking { display: flex; align-items: center; gap: .9rem; margin-top: 1.25rem; padding: .8rem 1rem; max-width: 27rem; background: var(--dark-2); border: 1px solid #33373B; border-radius: 8px; font-size: .875rem; line-height: 1.35; }
+.nb-time { font-family: var(--f-mono); font-size: .8125rem; color: var(--accent-on-dark); }
+.nb-text { flex: 1; color: var(--on-dark-2); }
+.nb-text b { display: block; color: var(--on-dark); font-weight: 600; }
+.nb-state { display: none; align-items: center; gap: .4rem; font-size: .75rem; color: var(--on-dark-2); white-space: nowrap; }
+.nb-state::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #51CF66; }
+@media (min-width: 420px) { .nb-state { display: inline-flex; } }
+.a11y-contrast .night-booking { border-color: #6B6760; }
+
+/* Beispiel-Termine zum Antippen in der Zusatzleistung */
+.extra + .extra { margin-top: 1rem; }
+.extra-body a { font-weight: 600; }
+.try { margin: 1.25rem 0 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--line); }
+html:not(.js) .try { display: none; }
+.try-label { margin: 0 0 .75rem; font-family: var(--f-mono); font-size: .75rem; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-2) !important; max-width: none !important; }
+.try-slots { display: flex; flex-wrap: wrap; gap: .5rem; }
+.try-slots button { min-height: 2.75rem; padding: .5rem .9rem; font-family: var(--f-mono); font-size: .875rem; color: var(--ink); background: var(--paper); border: 1px solid var(--ink); border-radius: var(--radius); cursor: pointer; transition: background-color .15s ease, color .15s ease; }
+.try-slots button:hover:not(:disabled):not([aria-pressed="true"]) { background: var(--accent-soft); }
+.try-slots button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.try-slots button:disabled { border-style: dashed; border-color: #8C8F93; color: #5A5E62; text-decoration: line-through; cursor: not-allowed; }
+.try-status { margin: .9rem 0 0 !important; padding: .75rem 1rem; background: var(--accent-soft); border-left: 3px solid var(--accent); border-radius: 0 var(--radius) var(--radius) 0; color: var(--ink) !important; font-size: .9375rem; }
+.try-status:empty { display: none; }

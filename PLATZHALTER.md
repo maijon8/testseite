@@ -22,6 +22,14 @@ Auf der Seite sind verbleibende Platzhalter orange-gestrichelt markiert (`<mark 
 | Vorschaubilder | `assets/img/demos/*.webp` sind Screenshots der Beispielseiten und müssen nach Änderungen neu erzeugt werden |
 | Namen | Vor dem Livegang kurz prüfen, ob es einen gleichnamigen Betrieb in der Region gibt |
 
+## Online-Terminbuchung
+- Die Buchung in `demo-salon.html` und `demo-werkstatt.html` ist eine Vorführung im Browser: freie und belegte Zeiten sind ausgedacht, es wird nichts gespeichert oder gesendet
+- Für echte Kunden ist Easy!Appointments (Open Source, GPL-3.0) vorgesehen; es muss pro Kunde installiert werden. Im KAS prüfen: PHP 8.2+, MySQL-Datenbank, Cronjob
+- Auf der Startseite steht die Terminbuchung als „Zusatzleistung“ ohne Preis. Preis und Paket-Zuordnung festlegen
+- Die Aussagen „Termin steht im Kalender“, „Bestätigung per E-Mail“, „ohne Buchungsportal und ohne Provision“ gelten für eine selbst betriebene Lösung wie Easy!Appointments. Vor dem ersten Kundenprojekt einmal selbst testen
+- Datenschutz: Auftragsverarbeitungsvertrag mit jedem Kunden, Buchung in der Datenschutzerklärung der Kundenseite erwähnen
+- Idee für später: das eigene Erstgespräch über dieselbe Buchung anbieten – dann erleben Interessenten das Produkt direkt
+
 ## Vor dem echten Betrieb
 - Impressum und Datenschutzerklärung mit eRecht24 gegenprüfen
 - Auftragsverarbeitungsvertrag (AVV) mit ALL-INKL.COM im KAS abschließen

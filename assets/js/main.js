@@ -61,6 +61,18 @@
     }
   } catch (e) {}
 
+  // Zusatzleistung Terminbuchung: Beispiel-Termine zum Antippen (nichts wird gespeichert)
+  document.querySelectorAll('[data-try-booking]').forEach(function (box) {
+    var status = box.querySelector('.try-status');
+    var slots = box.querySelectorAll('button[data-when]');
+    slots.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        slots.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+        status.textContent = 'Gebucht: ' + btn.getAttribute('data-when') + '. Kein Anruf, keine Warteschleife – und bei Ihnen steht der Termin im Kalender. (Nur ein Beispiel, es wurde nichts gespeichert.)';
+      });
+    });
+  });
+
   function fallbackCopy(text) {
     var ta = document.createElement('textarea');
     ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';

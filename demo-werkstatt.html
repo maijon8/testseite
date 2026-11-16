@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kfz-Meisterbetrieb Kessler – Beispiel-Website von Saarflow</title>
-  <meta name="description" content="Beispiel-Website von Saarflow für eine Kfz-Werkstatt: Terminanfrage, Leistungen, Ablauf und Anfahrt. Der Betrieb ist frei erfunden.">
+  <meta name="description" content="Beispiel-Website von Saarflow für eine Kfz-Werkstatt: Online-Terminbuchung, Leistungen, Ablauf und Anfahrt. Der Betrieb ist frei erfunden.">
   <meta name="robots" content="noindex">
   <meta name="theme-color" content="#13171C">
   <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/demo-sites.css?v=25">
+  <link rel="stylesheet" href="assets/css/demo-sites.css?v=26">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -35,7 +35,7 @@
           <li><a href="#ueber-uns">Über uns</a></li>
           <li><a href="#anfahrt">Anfahrt</a></li>
         </ul>
-        <a class="btn btn--small" href="#termin">Termin anfragen</a>
+        <a class="btn btn--small" href="#termin">Termin buchen</a>
       </nav>
     </div>
   </header>
@@ -52,7 +52,9 @@
           <p class="lead">Sie bringen Ihr Auto morgens vorbei, wir rufen an, sobald es fertig ist. Einen Ersatzwagen gibt es auf Wunsch.</p>
           <ul class="k-tags" aria-label="Häufige Leistungen"><li>Inspektion</li><li>Reifenservice</li><li>HU/AU</li><li>Klimaservice</li></ul>
         </div>
-        <form id="termin" class="card-form" data-demo-form novalidate aria-labelledby="termin-title">
+        <div id="termin" data-booking="{&quot;title&quot;:&quot;Termin online buchen&quot;,&quot;serviceLabel&quot;:&quot;Was soll gemacht werden?&quot;,&quot;submit&quot;:&quot;Termin buchen&quot;,&quot;services&quot;:[{&quot;name&quot;:&quot;Inspektion mit Ölwechsel&quot;,&quot;info&quot;:&quot;ca. 3 Std.&quot;},{&quot;name&quot;:&quot;HU/AU&quot;,&quot;info&quot;:&quot;ca. 1 Std. · Di und Do&quot;},{&quot;name&quot;:&quot;Reifenwechsel&quot;,&quot;info&quot;:&quot;ca. 30 Min.&quot;},{&quot;name&quot;:&quot;Bremsen prüfen&quot;,&quot;info&quot;:&quot;ca. 1 Std.&quot;},{&quot;name&quot;:&quot;Klimaservice&quot;,&quot;info&quot;:&quot;ca. 1 Std.&quot;}],&quot;open&quot;:{&quot;1&quot;:[&quot;07:30&quot;,&quot;15:30&quot;],&quot;2&quot;:[&quot;07:30&quot;,&quot;15:30&quot;],&quot;3&quot;:[&quot;07:30&quot;,&quot;15:30&quot;],&quot;4&quot;:[&quot;07:30&quot;,&quot;15:30&quot;],&quot;5&quot;:[&quot;07:30&quot;,&quot;15:30&quot;]},&quot;step&quot;:60,&quot;fields&quot;:[{&quot;id&quot;:&quot;name&quot;,&quot;label&quot;:&quot;Name&quot;,&quot;autocomplete&quot;:&quot;name&quot;},{&quot;id&quot;:&quot;auto&quot;,&quot;label&quot;:&quot;Fahrzeug&quot;,&quot;placeholder&quot;:&quot;z. B. Kleinwagen, Baujahr 2018&quot;},{&quot;id&quot;:&quot;tel&quot;,&quot;label&quot;:&quot;Telefon&quot;,&quot;type&quot;:&quot;tel&quot;,&quot;autocomplete&quot;:&quot;tel&quot;}],&quot;heading&quot;:&quot;h2&quot;}">
+        <div class="card-form book book-pre" inert><h2 class="book-title">Termin online buchen</h2><ol class="book-steps"><li class="is-current">Leistung</li><li>Termin</li><li>Daten</li></ol><div class="book-panel"><fieldset><legend>Was soll gemacht werden?</legend><div class="book-list"><label class="book-opt"><input type="radio" name="k-pre-s"><span><b>Inspektion mit Ölwechsel</b><small>ca. 3 Std.</small></span></label><label class="book-opt"><input type="radio" name="k-pre-s"><span><b>HU/AU</b><small>ca. 1 Std. · Di und Do</small></span></label><label class="book-opt"><input type="radio" name="k-pre-s"><span><b>Reifenwechsel</b><small>ca. 30 Min.</small></span></label><label class="book-opt"><input type="radio" name="k-pre-s"><span><b>Bremsen prüfen</b><small>ca. 1 Std.</small></span></label><label class="book-opt"><input type="radio" name="k-pre-s"><span><b>Klimaservice</b><small>ca. 1 Std.</small></span></label></div></fieldset></div><p class="book-summary"></p><div class="book-actions"><button type="button" class="btn" aria-disabled="true">Weiter</button></div><p class="form-note">Beispiel-Buchung: Es wird nichts gespeichert oder gesendet.</p></div>
+        <form class="card-form" data-demo-form novalidate aria-labelledby="termin-title">
           <h2 id="termin-title">Termin anfragen</h2>
           <div class="f"><label for="k-auto">Fahrzeug</label><input id="k-auto" type="text" placeholder="z. B. Kleinwagen, Baujahr 2018"></div>
           <div class="f"><label for="k-was">Anliegen</label><select id="k-was"><option>Inspektion mit Ölwechsel</option><option>HU/AU</option><option>Reifenwechsel</option><option>Bremsen</option><option>Klimaservice</option><option>Etwas anderes</option></select></div>
@@ -63,6 +65,7 @@
           <button class="btn" type="submit">Anfrage senden</button>
           <p class="form-note" role="status">Wir melden uns am selben Werktag.</p>
         </form>
+        </div>
       </div>
     </section>
 
@@ -90,7 +93,7 @@
           <h2 id="ablauf-title">Drei Schritte, dann läuft er wieder.</h2>
         </div>
         <ol class="k-steps">
-          <li><h3>Termin anfragen</h3><p>Per Formular oder Telefon. Wir bestätigen noch am selben Werktag.</p></li>
+          <li><h3>Termin buchen</h3><p>Online in einer Minute – auch abends und am Wochenende. Oder einfach anrufen.</p></li>
           <li><h3>Auto bringen</h3><p>Auch vor Öffnung: Der Schlüssel kommt einfach in den Einwurf.</p></li>
           <li><h3>Abholen</h3><p>Wir rufen an, sobald Ihr Auto fertig ist, und erklären, was gemacht wurde.</p></li>
         </ol>
@@ -138,6 +141,6 @@
     </div>
   </footer>
 
-  <script src="assets/js/demo.js?v=25" defer></script>
+  <script src="assets/js/demo.js?v=26" defer></script>
 </body>
 </html>

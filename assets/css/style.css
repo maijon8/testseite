@@ -584,7 +584,7 @@ html:not(.js) .nav-toggle { display: none; }
 .extra--pricing { margin-top: 1.5rem; }
 
 /* ==========================================================================
-   KI-Automatisierung
+   Automatisierung
    ========================================================================== */
 /* Ablauf-Mockup im Hero */
 .flow { position: relative; display: grid; gap: .9rem; background: #fff; border: 1px solid var(--line); border-radius: 10px; padding: clamp(1.1rem, .8rem + 1.5vw, 1.75rem); box-shadow: 0 30px 60px -30px rgba(22, 24, 26, .25); }
@@ -615,15 +615,12 @@ html:not(.js) .nav-toggle { display: none; }
 .founders--single { grid-template-columns: minmax(0, 18rem); }
 @media (min-width: 900px) { .founders--single { justify-content: end; } }
 
-/* Bereichs-Umschalter im Header (Webdesign / KI-Automatisierung) */
+/* Bereichsnavigation (Webdesign / Automatisierung): Textlinks, mittig im Header */
 .nav-portal { margin-top: .75rem; width: 100%; }
 @media (min-width: 760px) {
   .header-inner { position: relative; }
   .main-nav, .js .main-nav:not(.is-open) { display: flex; align-items: center; }
-  .main-nav .nav-switch { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); gap: .25rem; padding: .3rem; background: #fff; border: 1px solid var(--line); border-radius: 999px; }
-  .main-nav .nav-switch a { display: block; padding: .55rem 1.15rem; border-radius: 999px; font-weight: 600; font-size: .9375rem; color: var(--ink-2); transition: background-color .15s ease, color .15s ease; }
-  .main-nav .nav-switch a:hover { color: var(--ink); background: var(--paper-2); }
-  .main-nav .nav-switch a[aria-current="page"] { background: var(--ink); color: var(--paper); box-shadow: none; padding-left: 1.15rem; }
+  .main-nav .nav-switch { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); gap: 2rem; }
   .nav-portal { margin: 0; width: auto; }
 }
 .legal h1, .legal h2, .legal h3, .legal p { overflow-wrap: break-word; hyphens: auto; }

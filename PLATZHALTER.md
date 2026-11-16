@@ -48,5 +48,6 @@ Auf der Seite sind verbleibende Platzhalter orange-gestrichelt markiert (`<mark 
 - Google-Unternehmensprofil anlegen (wichtigster Hebel für lokale Suchen wie „Webdesign Saarlouis“). Die Adresse lässt sich dort verbergen, wenn nur ein Einzugsgebiet angezeigt werden soll
 - In den strukturierten Daten der Startseite stehen bewusst nur Ort und PLZ (Ensdorf, 66806), keine Straße und keine Telefonnummer
 - Die alte Kopie unter GitHub Pages abschalten oder das Repository privat stellen, damit die Seite nicht doppelt im Netz steht
+- Icon in der Google-Suche: `favicon.ico` liegt im Hauptordner, dazu PNG in 96 und 192 px. Nach dem Hochladen in der Search Console die Startseite über „URL-Prüfung“ neu einreichen; bis das Icon erscheint, dauert es Tage bis Wochen
 - Neue Seite angelegt? In `sitemap.xml` eintragen und `<link rel="canonical">` setzen
 - HSTS steht auf 30 Tage (`.htaccess`); wenn HTTPS ein paar Wochen stabil läuft, auf ein Jahr (`max-age=31536000`) erhöhen

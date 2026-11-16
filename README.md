@@ -7,7 +7,7 @@ cd testseite
 python3 -m http.server 8080   # dann http://localhost:8080 öffnen
 ```
 
-- `index.html` – Webdesign · `demos.html` – Beispiel-Websites · `automatisierung.html` · `impressum.html` · `datenschutz.html` · `barrierefreiheit.html`
+- `index.html` – Webdesign · `demos.html` – Beispiel-Websites · `digitalisierung.html` · `impressum.html` · `datenschutz.html` · `barrierefreiheit.html`
 - `assets/css/style.css` – alle Styles, Design-Tokens oben in `:root`
 - `assets/css/demos.css` – nur für `demos.html`: Galerie der Beispiele
 - `demo-restaurant.html` · `demo-handwerk.html` · `demo-werkstatt.html` · `demo-salon.html` – die vier Beispiel-Websites (eigenes Design, `assets/css/demo-sites.css`, `assets/js/demo.js`, `noindex`)
@@ -19,3 +19,5 @@ python3 -m http.server 8080   # dann http://localhost:8080 öffnen
 Für den Live-Betrieb auf dem Server gzip/brotli und lange Cache-Header für `assets/` aktivieren.
 
 **Nach Änderungen an CSS/JS** die Versionsnummer `?v=…` in allen HTML-Dateien hochzählen, damit Browser nicht die alte Datei aus dem Cache nehmen.
+
+SEO: `robots.txt`, `sitemap.xml`, `404.html` (Pfade ab Wurzel), `assets/img/og-saarflow.png` (Vorschaubild für geteilte Links). Kanonische Adresse ist `https://saarflow.info/` ohne `www`; die `.htaccess` für den Server liegt nicht im Repository.

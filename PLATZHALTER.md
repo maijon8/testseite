@@ -26,11 +26,19 @@ Auf der Seite sind verbleibende Platzhalter orange-gestrichelt markiert (`<mark 
 - Impressum und Datenschutzerklärung mit eRecht24 gegenprüfen
 - Auftragsverarbeitungsvertrag (AVV) mit ALL-INKL.COM im KAS abschließen
 - AVV/DPA mit Vercel (Kundenportal) abschließen
-- SSL-Zertifikat im KAS aktivieren, danach HTTPS-Weiterleitung einschalten
 
-## Automatisierung (`automatisierung.html`)
+## Digitalisierung (`digitalisierung.html`)
 - Einsatzbeispiele und Ablauf mit Dennis abstimmen – nur anbieten, was wirklich umgesetzt werden kann
 - Preise / Preismodell für KI-Projekte ergänzen, sobald festgelegt
 - Datenschutz: eingesetzte KI-Dienste (z. B. OpenAI, Anthropic, Mistral) in der Datenschutzerklärung der jeweiligen Kunden-Lösung berücksichtigen; AVV mit jedem Dienst
-- Gewerbeanmeldung um „Automatisierung mit KI / Softwaredienstleistungen“ erweitern (Gewerbeummeldung)
+- Gewerbeanmeldung um „Digitalisierung, Automatisierung mit KI / Softwaredienstleistungen“ erweitern (Gewerbeummeldung)
 - Foto von Dennis ersetzt später die Initialen
+
+## Suchmaschinen (SEO)
+- Google Search Console einrichten (search.google.com/search-console), Domain `saarflow.info` bestätigen und `https://saarflow.info/sitemap.xml` einreichen
+- Dasselbe bei Bing Webmaster Tools (optional)
+- Google-Unternehmensprofil anlegen (wichtigster Hebel für lokale Suchen wie „Webdesign Saarlouis“). Die Adresse lässt sich dort verbergen, wenn nur ein Einzugsgebiet angezeigt werden soll
+- In den strukturierten Daten der Startseite stehen bewusst nur Ort und PLZ (Ensdorf, 66806), keine Straße und keine Telefonnummer
+- Die alte Kopie unter GitHub Pages abschalten oder das Repository privat stellen, damit die Seite nicht doppelt im Netz steht
+- Neue Seite angelegt? In `sitemap.xml` eintragen und `<link rel="canonical">` setzen
+- HSTS steht auf 30 Tage (`.htaccess`); wenn HTTPS ein paar Wochen stabil läuft, auf ein Jahr (`max-age=31536000`) erhöhen

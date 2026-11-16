@@ -192,7 +192,7 @@ html:not(.js) .nav-toggle { display: none; }
 .lead { font-size: var(--fs-lead); color: var(--ink-2); max-width: 36rem; margin-top: 1.75rem; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 2rem; margin-top: 2.25rem; }
 .hero-actions .btn { width: 100%; }
-.hero-sub { margin: 1.5rem 0 0; }
+.hero-sub { margin: 1.5rem 0 0; display: flex; flex-wrap: wrap; gap: .75rem 2rem; }
 @media (min-width: 520px) { .hero-actions .btn { width: auto; } }
 
 .facts { display: grid; grid-template-columns: repeat(3, auto); justify-content: start; gap: 1.25rem clamp(1.25rem, 3vw, 2.25rem); margin: 3rem 0 0; padding-top: 1.5rem; border-top: 1px solid var(--line); }
@@ -226,7 +226,7 @@ html:not(.js) .nav-toggle { display: none; }
 .mock-label { font-family: var(--f-display); font-weight: 650; font-size: 1.05rem; margin-bottom: .9rem; }
 .mock-msg { max-width: 88%; padding: .7rem .85rem .6rem; border-radius: 8px; margin-bottom: .75rem; font-size: .8125rem; line-height: 1.45; }
 .mock-msg p { margin: 0 0 .35rem; }
-.mock-msg small { display: block; font-size: .6875rem; color: #6B6F73; }
+.mock-msg small { display: block; font-size: .6875rem; color: #5A5E62; }
 .mock-msg--in { background: var(--paper-2); color: var(--ink); }
 .mock-msg--out { margin-left: auto; background: var(--ink); color: var(--paper); }
 .mock-msg--out small { color: var(--on-dark-2); }

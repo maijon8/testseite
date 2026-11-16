@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Demos: Beispiel-Websites für Restaurant, Handwerk, Werkstatt und Salon – Saarflow</title>
+  <meta name="description" content="Vier Beispiel-Websites von Saarflow: Restaurant, Schreinerei, Kfz-Werkstatt und Friseursalon. So könnte die Website Ihres Betriebs aussehen.">
+  <meta name="theme-color" content="#F6F4EF">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css?v=24">
+  <link rel="stylesheet" href="assets/css/demos.css?v=24">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>(function(d){d.classList.add('js');try{var a=JSON.parse(localStorage.getItem('sf-a11y')||'{}');if(a.font)d.classList.add('a11y-font-'+a.font);for(var k in a){if(k!=='font'&&a[k])d.classList.add('a11y-'+k)}}catch(e){}})(document.documentElement)</script>
+</head>
+<body>
+  <a class="skip-link" href="#inhalt">Zum Inhalt springen</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="./" aria-label="Saarflow – Startseite">
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 22c6 0 6-12 13-12s7 12 13 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
+        <span>Saarflow</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="hauptnavigation">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+        <span class="visually-hidden">Menü</span>
+      </button>
+      <nav id="hauptnavigation" class="main-nav" aria-label="Hauptnavigation">
+        <ul class="nav-switch">
+          <li><a href="index.html">Webdesign</a></li>
+          <li><a href="demos.html" aria-current="page">Demos</a></li>
+          <li><a href="automatisierung.html">Automatisierung</a></li>
+        </ul>
+        <a class="btn btn-small btn-portal nav-portal" href="https://kundenportal.saarflow.info">Zum Kundenportal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhalt">
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Demos · Beispiel-Websites nach Branche</p>
+          <h1 id="hero-title">So könnte Ihre Website aussehen.</h1>
+          <p class="lead">Vier Betriebe, vier Branchen, vier Gestaltungen. Die Beispiele zeigen, wie unterschiedlich eine Website von Saarflow aussehen kann – Ihre entwickeln wir passend zu Ihrem Betrieb.</p>
+          <div class="hero-actions">
+            <a class="btn btn-large" href="#kontakt">Kostenloses, unverbindliches Erstgespräch</a>
+            <a class="text-link" href="#restaurant">Zu den Beispielen <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+
+        <!-- Branchen-Index -->
+        <nav class="demo-index reveal" aria-label="Demos nach Branche">
+          <ol>
+            <li><a href="#restaurant"><span class="num" aria-hidden="true">01</span><span class="demo-index-text"><b>Restaurant</b><small>Gasthaus Lindenblick</small></span><span class="arrow" aria-hidden="true">↓</span></a></li>
+            <li><a href="#handwerk"><span class="num" aria-hidden="true">02</span><span class="demo-index-text"><b>Handwerk</b><small>Schreinerei Brandt</small></span><span class="arrow" aria-hidden="true">↓</span></a></li>
+            <li><a href="#werkstatt"><span class="num" aria-hidden="true">03</span><span class="demo-index-text"><b>Kfz-Werkstatt</b><small>Kfz-Meisterbetrieb Kessler</small></span><span class="arrow" aria-hidden="true">↓</span></a></li>
+            <li><a href="#salon"><span class="num" aria-hidden="true">04</span><span class="demo-index-text"><b>Friseursalon</b><small>Salon Nora</small></span><span class="arrow" aria-hidden="true">↓</span></a></li>
+          </ol>
+          <p class="demo-index-note">Alle gezeigten Betriebe sind frei erfunden. Die Beispiele sind Entwürfe, keine Kundenprojekte.</p>
+        </nav>
+      </div>
+    </section>
+
+    <!-- 01 · RESTAURANT -->
+    <section id="restaurant" class="section demo" aria-labelledby="demo-restaurant-title">
+      <div class="container">
+        <div class="demo-head">
+          <div>
+            <p class="eyebrow"><span class="num">01</span> Restaurant</p>
+            <h2 id="demo-restaurant-title">Wer Hunger hat, will drei Dinge wissen.</h2>
+          </div>
+          <div class="demo-copy">
+            <p>Was gibt es, wann ist geöffnet, wie reserviere ich? Die Beispielseite beantwortet alle drei Fragen, ohne dass jemand lange suchen muss.</p>
+            <ul class="demo-points">
+              <li>Tagesgericht und Öffnungszeiten ändern Sie per Nachricht im Kundenportal</li>
+              <li>Reservieren mit einem Tipp – per Anruf oder Anfrage</li>
+              <li>Google-Bewertungen direkt auf der Seite</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="demo-window reveal" role="img" aria-label="Beispiel-Website für ein Restaurant: Gasthaus Lindenblick in dunklem Grün mit Serifenschrift. Oben das Menü mit dem Button „Tisch reservieren“, darunter die Überschrift „Gutes Essen braucht keinen Anlass.“, die heutigen Öffnungszeiten, das Tagesgericht, die Google-Bewertung und ein Auszug aus der Speisekarte.">
+          <div class="mock-bar" aria-hidden="true"><span></span><span></span><span></span><em>gasthaus-lindenblick.example</em></div>
+          <div class="ds ds--rest" aria-hidden="true">
+            <div class="ds-nav">
+              <span class="ds-logo">Lindenblick<small>Gasthaus</small></span>
+              <span class="ds-links"><span>Speisekarte</span><span>Mittagstisch</span><span>Feiern</span><span>Anfahrt</span></span>
+              <span class="ds-btn ds-nav-btn">Tisch reservieren</span>
+              <span class="ds-burger"></span>
+            </div>
+            <div class="rest-hero">
+              <div class="rest-copy">
+                <p class="ds-kicker">Saarländische Küche · seit 1987</p>
+                <p class="ds-h">Gutes Essen braucht keinen Anlass.</p>
+                <p class="ds-lead">Dibbelabbes, Gefillde und ein Mittagstisch, der jeden Tag wechselt – frisch gekocht, mitten im Ort.</p>
+                <p class="ds-actions"><span class="ds-btn">Tisch reservieren</span><span class="ds-link">Speisekarte ansehen →</span></p>
+              </div>
+              <div class="rest-art">
+                <svg viewBox="0 0 240 280" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="120" cy="165" r="68"/><circle cx="120" cy="165" r="45"/><path d="M26 108v30a10 10 0 0 0 20 0v-30M36 108v124M214 232V104c-12 8-17 30-17 54h17M101 72c0-12 12-12 12-24M127 72c0-12 12-12 12-24"/></svg>
+              </div>
+            </div>
+            <div class="rest-strip">
+              <div><small>Heute geöffnet</small><b>11:30 – 14:00 · 17:30 – 22:00</b></div>
+              <div><small>Mittagstisch heute</small><b>Lyonerpfanne mit Bratkartoffeln</b></div>
+              <div><small>Google-Bewertungen</small><b>4,8 von 5 Sternen</b></div>
+            </div>
+            <div class="rest-menu">
+              <p class="rest-menu-title">Aus der Karte</p>
+              <ul>
+                <li><b>Dibbelabbes</b><span>mit Apfelmus und Endiviensalat</span></li>
+                <li><b>Gefillde</b><span>mit Specksoße und Sauerkraut</span></li>
+                <li><b>Schwenker vom Buchenholz</b><span>mit Kartoffelsalat</span></li>
+                <li><b>Hoorische</b><span>mit Speckrahmsoße</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="demo-foot">
+          <p class="demo-meta">Beispielbetrieb, frei erfunden · Paket Premium</p>
+          <a class="btn btn-outline" href="#kontakt" data-paket="Restaurant">Restaurant-Website unverbindlich anfragen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 · HANDWERK -->
+    <section id="handwerk" class="section demo" aria-labelledby="demo-handwerk-title">
+      <div class="container">
+        <div class="demo-head">
+          <div>
+            <p class="eyebrow"><span class="num">02</span> Handwerk</p>
+            <h2 id="demo-handwerk-title">Ihre Arbeit ist das beste Argument.</h2>
+          </div>
+          <div class="demo-copy">
+            <p>Im Handwerk zählt, was man sieht. Die Beispielseite stellt fertige Projekte in den Mittelpunkt und macht die Anfrage so leicht wie möglich.</p>
+            <ul class="demo-points">
+              <li>Projekte mit Bildern statt langer Texte</li>
+              <li>Der Weg zur Anfrage ist immer nur einen Tipp entfernt</li>
+              <li>Neue Projekte schicken Sie uns als Fotos – wir stellen sie ein</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="demo-window reveal" role="img" aria-label="Beispiel-Website für einen Handwerksbetrieb: Schreinerei Brandt in Weiß mit Holztönen. Große Überschrift „Möbel und Innenausbau nach Maß.“, der Button „Projekt anfragen“ und drei Projekte: eine Küche in Eiche, ein Einbauschrank unter der Dachschräge und eine Treppe in Esche.">
+          <div class="mock-bar" aria-hidden="true"><span></span><span></span><span></span><em>schreinerei-brandt.example</em></div>
+          <div class="ds ds--holz" aria-hidden="true">
+            <div class="ds-nav">
+              <span class="ds-logo"><i></i>Brandt<small>Schreinerei</small></span>
+              <span class="ds-links"><span>Leistungen</span><span>Projekte</span><span>Werkstatt</span><span>Kontakt</span></span>
+              <span class="ds-btn ds-nav-btn">Projekt anfragen</span>
+              <span class="ds-burger"></span>
+            </div>
+            <div class="holz-hero">
+              <p class="ds-h">Möbel und Innenausbau nach Maß.</p>
+              <div class="holz-side">
+                <p class="ds-lead">Küchen, Einbauschränke und Treppen aus der eigenen Werkstatt – geplant, gebaut und montiert von einem Team.</p>
+                <p class="ds-actions"><span class="ds-btn">Projekt anfragen</span><span class="ds-link">Projekte ansehen →</span></p>
+              </div>
+            </div>
+            <ul class="holz-facts"><li>Meisterbetrieb</li><li>Eigene Werkstatt</li><li>Aufmaß bei Ihnen vor Ort</li></ul>
+            <div class="holz-projects">
+              <div class="holz-tile holz-tile--a">
+                <div class="holz-img"><svg viewBox="0 0 200 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 62h160v40H20zM60 62v40M100 62v40M140 62v40M20 16h70v28H20zM55 16v28M122 16h58v28h-58zM151 16v28M36 78h8M76 78h8M116 78h8M156 78h8M10 102h180"/></svg></div>
+                <p><b>Küche in Eiche</b><small>Einfamilienhaus · 2025</small></p>
+              </div>
+              <div class="holz-tile holz-tile--b">
+                <div class="holz-img"><svg viewBox="0 0 200 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 102V70l96-52h56v84zM60 102V51M100 102V29M140 102V18M50 76v8M90 66v8M130 60v8M10 102h180"/></svg></div>
+                <p><b>Einbauschrank</b><small>unter der Dachschräge</small></p>
+              </div>
+              <div class="holz-tile holz-tile--c">
+                <div class="holz-img"><svg viewBox="0 0 200 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 102h28V84h28V66h28V48h28V30h44M36 102V76M148 30V4M36 76 148 4M92 66V40M10 102h180"/></svg></div>
+                <p><b>Treppe in Esche</b><small>Altbau-Sanierung</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="demo-foot">
+          <p class="demo-meta">Beispielbetrieb, frei erfunden · Paket Standard</p>
+          <a class="btn btn-outline" href="#kontakt" data-paket="Handwerk">Handwerker-Website unverbindlich anfragen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · KFZ-WERKSTATT -->
+    <section id="werkstatt" class="section demo" aria-labelledby="demo-werkstatt-title">
+      <div class="container">
+        <div class="demo-head">
+          <div>
+            <p class="eyebrow"><span class="num">03</span> Kfz-Werkstatt</p>
+            <h2 id="demo-werkstatt-title">Die Anfrage kommt, während Sie unterm Auto liegen.</h2>
+          </div>
+          <div class="demo-copy">
+            <p>Wer in der Werkstatt steht, kann nicht ans Telefon. Die Beispielseite nimmt Terminanfragen entgegen und sagt klar, was Sie anbieten.</p>
+            <ul class="demo-points">
+              <li>Terminanfrage per Formular oder Anruf</li>
+              <li>Leistungen und HU-Termine auf einen Blick</li>
+              <li>Hinweise wie Betriebsferien stehen ganz oben – und sind schnell geändert</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="demo-window reveal" role="img" aria-label="Beispiel-Website für eine Kfz-Werkstatt: Kfz-Meisterbetrieb Kessler in Dunkelgrau mit gelbem Akzent. Oben ein Hinweis zu Öffnungszeiten und HU-Terminen, darunter die Überschrift „Inspektion, Reifen, HU/AU. Alles aus einer Hand.“, vier Leistungen und ein Formular für die Terminanfrage.">
+          <div class="mock-bar" aria-hidden="true"><span></span><span></span><span></span><em>kfz-kessler.example</em></div>
+          <div class="ds ds--kfz" aria-hidden="true">
+            <div class="kfz-top">Heute geöffnet bis 18:00 Uhr · HU/AU jeden Dienstag und Donnerstag im Haus</div>
+            <div class="ds-nav">
+              <span class="ds-logo">Kessler<small>Kfz-Meisterbetrieb</small></span>
+              <span class="ds-links"><span>Leistungen</span><span>Termin</span><span>Über uns</span><span>Anfahrt</span></span>
+              <span class="ds-btn ds-nav-btn">Anrufen</span>
+              <span class="ds-burger"></span>
+            </div>
+            <div class="kfz-hero">
+              <svg class="kfz-wheel" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="100" cy="100" r="98"/><circle cx="100" cy="100" r="70"/><circle cx="100" cy="100" r="16"/><path d="M100 30v54M100 116v54M30 100h54M116 100h54M50.5 50.5l38.2 38.2M111.3 111.3l38.2 38.2M149.5 50.5l-38.2 38.2M88.7 111.3l-38.2 38.2"/></svg>
+              <div class="kfz-copy">
+                <p class="ds-kicker">Freie Werkstatt · alle Marken</p>
+                <p class="ds-h">Inspektion, Reifen, HU/AU. Alles aus einer Hand.</p>
+                <p class="ds-lead">Sie bringen Ihr Auto morgens vorbei, wir rufen an, sobald es fertig ist. Einen Ersatzwagen gibt es auf Wunsch.</p>
+                <ul class="kfz-services"><li><i>01</i>Inspektion</li><li><i>02</i>Reifenservice</li><li><i>03</i>HU/AU</li><li><i>04</i>Klimaservice</li></ul>
+              </div>
+              <div class="kfz-form">
+                <b>Termin anfragen</b>
+                <span class="kfz-field"><small>Fahrzeug</small>Kleinwagen, Baujahr 2018</span>
+                <span class="kfz-field"><small>Anliegen</small>Inspektion mit Ölwechsel</span>
+                <span class="kfz-field"><small>Wunschtermin</small>Dienstag, vormittags</span>
+                <span class="ds-btn">Anfrage senden</span>
+                <small class="kfz-hint">Wir melden uns am selben Werktag.</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="demo-foot">
+          <p class="demo-meta">Beispielbetrieb, frei erfunden · Paket Standard</p>
+          <a class="btn btn-outline" href="#kontakt" data-paket="Kfz-Werkstatt">Werkstatt-Website unverbindlich anfragen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · FRISEURSALON -->
+    <section id="salon" class="section demo" aria-labelledby="demo-salon-title">
+      <div class="container">
+        <div class="demo-head">
+          <div>
+            <p class="eyebrow"><span class="num">04</span> Friseursalon</p>
+            <h2 id="demo-salon-title">Ein Auftritt, der zu Ihrem Salon passt.</h2>
+          </div>
+          <div class="demo-copy">
+            <p>Im Salon entscheidet das Gefühl. Die Beispielseite ist hell und ruhig gestaltet, zeigt Leistungen und Öffnungszeiten und führt direkt zur Terminanfrage.</p>
+            <ul class="demo-points">
+              <li>Gestaltung in Ihren Farben und mit Ihrer Schrift</li>
+              <li>Leistungen und Öffnungszeiten, die Sie jederzeit ändern lassen können</li>
+              <li>Kundenstimmen aus Google direkt auf der Seite</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="demo-window reveal" role="img" aria-label="Beispiel-Website für einen Friseursalon: Salon Nora in hellem Rosé mit beerenfarbenem Akzent. Mittig die Überschrift „Zeit für einen neuen Schnitt.“ mit dem Button „Termin anfragen“, darunter Leistungen, Öffnungszeiten und eine Beispiel-Bewertung.">
+          <div class="mock-bar" aria-hidden="true"><span></span><span></span><span></span><em>salon-nora.example</em></div>
+          <div class="ds ds--salon" aria-hidden="true">
+            <div class="ds-nav salon-nav">
+              <span class="ds-links"><span>Leistungen</span><span>Team</span></span>
+              <span class="ds-logo">Salon Nora</span>
+              <span class="ds-links"><span>Galerie</span><span>Kontakt</span></span>
+              <span class="ds-burger"></span>
+            </div>
+            <div class="salon-hero">
+              <div class="salon-shape salon-shape--l"><svg viewBox="0 0 120 160" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="38" cy="128" r="16"/><circle cx="82" cy="128" r="16"/><path d="M45 113 86 22M75 113 34 22"/></svg></div>
+              <div class="salon-copy">
+                <p class="ds-kicker">Damen · Herren · Kinder</p>
+                <p class="ds-h">Zeit für einen neuen Schnitt.</p>
+                <p class="ds-lead">Schneiden, Farbe und Styling in entspannter Atmosphäre. Termine nach Vereinbarung – donnerstags auch abends.</p>
+                <p class="ds-actions"><span class="ds-btn">Termin anfragen</span></p>
+              </div>
+              <div class="salon-shape salon-shape--r"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 34h84v22H18zM28 56v34M39 56v34M50 56v34M61 56v34M72 56v34M83 56v34M94 56v34"/></svg></div>
+            </div>
+            <div class="salon-info">
+              <div>
+                <p class="salon-title">Leistungen</p>
+                <ul class="salon-list"><li>Schneiden und Föhnen</li><li>Farbe und Strähnen</li><li>Hochsteckfrisuren</li><li>Bartpflege</li></ul>
+              </div>
+              <div>
+                <p class="salon-title">Öffnungszeiten</p>
+                <ul class="salon-list salon-hours"><li><span>Di – Fr</span><span>09:00 – 18:00</span></li><li><span>Do</span><span>bis 20:00</span></li><li><span>Sa</span><span>08:00 – 14:00</span></li><li><span>So, Mo</span><span>geschlossen</span></li></ul>
+              </div>
+              <div class="salon-quote">
+                <p>„Endlich ein Salon, bei dem ich mich auf den Termin freue.“</p>
+                <small>Beispiel-Bewertung · Google</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="demo-foot">
+          <p class="demo-meta">Beispielbetrieb, frei erfunden · Paket Premium</p>
+          <a class="btn btn-outline" href="#kontakt" data-paket="Friseursalon">Salon-Website unverbindlich anfragen</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 · IHRE BRANCHE -->
+    <section id="branchen" class="section about" aria-labelledby="branchen-title">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
+          <p class="eyebrow"><span class="num">05</span> Ihre Branche</p>
+          <h2 id="branchen-title">Ihre Branche ist nicht dabei? Wir bauen auch dafür.</h2>
+          <p>Die vier Beispiele zeigen nur einen Ausschnitt. Jede Website von Saarflow entsteht einzeln – mit Ihren Texten, Ihren Farben und Ihren Bildern.</p>
+          <p>Was in den Paketen steckt und wie die Zusammenarbeit abläuft, lesen Sie unter <a href="index.html#preise">Pakete</a> und <a href="index.html#ablauf">So funktioniert's</a>.</p>
+        </div>
+        <ul class="branches reveal" aria-label="Weitere Branchen">
+          <li>Bäckerei</li>
+          <li>Café</li>
+          <li>Praxis</li>
+          <li>Physiotherapie</li>
+          <li>Kosmetikstudio</li>
+          <li>Elektrobetrieb</li>
+          <li>Sanitär und Heizung</li>
+          <li>Garten- und Landschaftsbau</li>
+          <li>Fahrschule</li>
+          <li>Hofladen</li>
+          <li class="branches-you">Ihr Betrieb</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 06 · KONTAKT -->
+    <section id="kontakt" class="section contact" aria-labelledby="kontakt-title">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow eyebrow--light"><span class="num">06</span> Kontakt</p>
+          <h2 id="kontakt-title">Sprechen wir über Ihre Website.</h2>
+          <p>Im kostenlosen und unverbindlichen Erstgespräch klären wir, was Ihre Seite können muss. Danach bekommen Sie ein unverbindliches Angebot.</p>
+          <dl class="contact-data">
+            <div><dt>E-Mail</dt><dd><a href="mailto:kontakt@saarflow.info">kontakt@saarflow.info</a></dd></div>
+          </dl>
+        </div>
+
+        <!-- Formular öffnet das E-Mail-Programm des Besuchers (mailto). -->
+        <form class="contact-form" action="mailto:kontakt@saarflow.info" novalidate data-contact-form data-topic="Webdesign" data-mailto="kontakt@saarflow.info">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="betrieb">Betrieb <span class="optional">(optional)</span></label>
+            <input id="betrieb" type="text" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="email">E-Mail oder Telefon</label>
+            <input id="email" type="text" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="paket">Welches Beispiel passt am ehesten?</label>
+            <div class="select-wrap">
+              <select id="paket">
+                <option value="">Noch unsicher – bitte beraten Sie mich</option>
+                <option value="Restaurant">Beispiel Restaurant</option>
+                <option value="Handwerk">Beispiel Handwerk</option>
+                <option value="Kfz-Werkstatt">Beispiel Kfz-Werkstatt</option>
+                <option value="Friseursalon">Beispiel Friseursalon</option>
+                <option value="Andere Branche">Meine Branche ist nicht dabei</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="nachricht">Worum geht es? <span class="optional">(optional)</span></label>
+            <textarea id="nachricht" rows="4" placeholder="z. B. Wir sind ein Malerbetrieb und haben noch keine Website"></textarea>
+          </div>
+          <button class="btn btn-light" type="submit">Unverbindliche Anfrage als E-Mail öffnen</button>
+          <p class="form-hint">Ihr E-Mail-Programm öffnet sich mit einer vorbereiteten Nachricht, die Sie vor dem Senden noch prüfen können. Über diese Website werden keine Daten übertragen.</p>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <p class="logo logo--small"><svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M3 22c6 0 6-12 13-12s7 12 13 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg> Saarflow</p>
+        <p class="footer-claim">Webdesign und Automatisierung für kleine Betriebe aus dem Saarland.</p>
+      </div>
+      <nav aria-label="Rechtliches">
+        <ul>
+          <li><a href="https://kundenportal.saarflow.info">Kundenportal</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="barrierefreiheit.html">Barrierefreiheit</a></li>
+          <li><button type="button" class="link-btn" data-cookie-settings>Cookie-Hinweis</button></li>
+        </ul>
+      </nav>
+      <p class="copyright">© 2026 Saarflow · Mailänder &amp; Scholl GbR</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=24" defer></script>
+</body>
+</html>

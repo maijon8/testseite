@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gasthaus Lindenblick – Beispiel-Website von Saarflow</title>
+  <meta name="description" content="Beispiel-Website von Saarflow für ein Restaurant: Speisekarte, Mittagstisch, Feiern und Reservierung. Der Betrieb ist frei erfunden.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#1E3A30">
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/demo-sites.css?v=25">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="t-rest" id="top">
+  <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- Hinweisleiste von Saarflow: gehört nicht zur Beispielseite -->
+  <aside class="demo-bar" aria-label="Hinweis von Saarflow">
+    <div class="demo-bar-in">
+      <p><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 22c6 0 6-12 13-12s7 12 13 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><strong>Beispiel-Website von Saarflow</strong> <span>Betrieb frei erfunden</span></p>
+      <p><a href="demos.html"><span aria-hidden="true">←</span> Alle Demos</a> <a class="demo-bar-cta" href="demos.html?beispiel=Restaurant#kontakt"><span class="sm">Unverbindlich anfragen</span><span class="lg">So eine Website unverbindlich anfragen</span></a></p>
+    </div>
+  </aside>
+
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="#top">Lindenblick <small>Gasthaus</small></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav"><span aria-hidden="true"></span><span class="vh">Menü</span></button>
+      <nav id="nav" class="nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#speisekarte">Speisekarte</a></li>
+          <li><a href="#mittagstisch">Mittagstisch</a></li>
+          <li><a href="#feiern">Feiern</a></li>
+          <li><a href="#anfahrt">Anfahrt</a></li>
+        </ul>
+        <a class="btn btn--small" href="#reservieren">Tisch reservieren</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhalt">
+    <section class="r-hero" aria-labelledby="hero-title">
+      <div class="wrap r-hero-grid">
+        <div class="r-hero-copy">
+          <p class="kicker">Saarländische Küche · seit 1987</p>
+          <h1 id="hero-title">Gutes Essen braucht keinen Anlass.</h1>
+          <p class="lead">Dibbelabbes, Gefillde und ein Mittagstisch, der jeden Tag wechselt – frisch gekocht, mitten im Ort.</p>
+          <p class="actions"><a class="btn" href="#reservieren">Tisch reservieren</a><a class="link" href="#speisekarte">Speisekarte ansehen <span aria-hidden="true">→</span></a></p>
+        </div>
+        <div class="r-art" aria-hidden="true">
+          <svg viewBox="0 0 240 280" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="120" cy="165" r="68"/><circle cx="120" cy="165" r="45"/><path d="M26 108v30a10 10 0 0 0 20 0v-30M36 108v124M214 232V104c-12 8-17 30-17 54h17M101 72c0-12 12-12 12-24M127 72c0-12 12-12 12-24"/></svg>
+        </div>
+      </div>
+      <div class="r-strip">
+        <dl class="wrap">
+          <div><dt>Heute geöffnet</dt><dd>11:30 – 14:00 · 17:30 – 22:00</dd></div>
+          <div><dt>Mittagstisch heute</dt><dd>Lyonerpfanne mit Bratkartoffeln</dd></div>
+          <div><dt>Google-Bewertungen</dt><dd>4,8 von 5 Sternen</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section id="speisekarte" class="sec" aria-labelledby="karte-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">Speisekarte</p>
+          <h2 id="karte-title">Was bei uns auf den Tisch kommt.</h2>
+        </div>
+        <div class="r-menu-cols">
+          <div>
+            <h3>Vorweg</h3>
+            <ul class="r-dishes">
+              <li><span><b>Rinderkraftbrühe</b><span>mit Markklößchen</span></span><span class="r-price">6,50&nbsp;€</span></li>
+              <li><span><b>Feldsalat</b><span>mit Speck und Kracherle</span></span><span class="r-price">8,90&nbsp;€</span></li>
+              <li><span><b>Lyonersalat</b><span>mit Bauernbrot</span></span><span class="r-price">9,50&nbsp;€</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Hauptgerichte</h3>
+            <ul class="r-dishes">
+              <li><span><b>Dibbelabbes</b><span>mit Apfelmus und Endiviensalat</span></span><span class="r-price">13,90&nbsp;€</span></li>
+              <li><span><b>Gefillde</b><span>mit Specksoße und Sauerkraut</span></span><span class="r-price">14,50&nbsp;€</span></li>
+              <li><span><b>Hoorische</b><span>mit Speckrahmsoße</span></span><span class="r-price">13,50&nbsp;€</span></li>
+              <li><span><b>Schwenker vom Buchenholz</b><span>mit Kartoffelsalat</span></span><span class="r-price">16,90&nbsp;€</span></li>
+              <li><span><b>Rostbraten</b><span>mit Zwiebeln und Bratkartoffeln</span></span><span class="r-price">24,90&nbsp;€</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Nachtisch</h3>
+            <ul class="r-dishes">
+              <li><span><b>Apfelküchle</b><span>mit Vanilleeis</span></span><span class="r-price">7,50&nbsp;€</span></li>
+              <li><span><b>Rote Grütze</b><span>mit Vanillesoße</span></span><span class="r-price">6,50&nbsp;€</span></li>
+              <li><span><b>Viez-Sorbet</b><span>zwei Kugeln</span></span><span class="r-price">5,90&nbsp;€</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="r-menu-note">Alle Preise inklusive Mehrwertsteuer. Allergene nennt Ihnen gern unser Service.</p>
+      </div>
+    </section>
+
+    <section id="mittagstisch" class="sec r-cream" aria-labelledby="mittag-title">
+      <div class="wrap r-lunch-grid">
+        <div class="sec-head">
+          <p class="kicker">Mittagstisch</p>
+          <h2 id="mittag-title">Jeden Mittag etwas anderes.</h2>
+          <p>Dienstag bis Freitag von 11:30 bis 14:00 Uhr. Jedes Gericht mit Tagessuppe für 9,80&nbsp;€.</p>
+        </div>
+        <ol class="r-week">
+          <li><span class="r-day">Dienstag <em>heute</em></span><span class="r-meal">Lyonerpfanne mit Bratkartoffeln und Spiegelei</span></li>
+          <li><span class="r-day">Mittwoch</span><span class="r-meal">Geheirate mit Specksoße</span></li>
+          <li><span class="r-day">Donnerstag</span><span class="r-meal">Linseneintopf mit Mettwurst und Bauernbrot</span></li>
+          <li><span class="r-day">Freitag</span><span class="r-meal">Backfisch mit hausgemachtem Kartoffelsalat</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="feiern" class="sec r-party" aria-labelledby="feiern-title">
+      <div class="wrap r-party-grid">
+        <div>
+          <p class="kicker">Feiern</p>
+          <h2 id="feiern-title">Platz für Ihre Feier.</h2>
+          <p>Geburtstag, Kommunion oder Betriebsfeier: Wir decken für kleine und große Runden. Das Menü stellen wir gemeinsam mit Ihnen zusammen.</p>
+          <p class="actions"><a class="btn" href="#reservieren">Feier anfragen</a></p>
+        </div>
+        <ul class="r-seats">
+          <li><b>60</b> Plätze im Saal</li>
+          <li><b>25</b> Plätze im Nebenzimmer</li>
+          <li><b>40</b> Plätze im Biergarten</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sec r-cream r-quote" aria-label="Kundenstimme">
+      <div class="wrap">
+        <blockquote>
+          <p>„Wie bei Oma am Sonntag – nur dass man danach nicht spülen muss.“</p>
+          <footer>Beispiel-Bewertung · Google</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="anfahrt" class="sec" aria-labelledby="anfahrt-title">
+      <div class="wrap r-visit-grid">
+        <div>
+          <p class="kicker">Anfahrt und Öffnungszeiten</p>
+          <h2 id="anfahrt-title">So finden Sie uns.</h2>
+          <dl class="hours">
+            <div><dt>Dienstag – Samstag</dt><dd>11:30 – 14:00 · 17:30 – 22:00</dd></div>
+            <div><dt>Sonntag</dt><dd>11:30 – 21:00</dd></div>
+            <div><dt>Montag</dt><dd>Ruhetag</dd></div>
+          </dl>
+          <address class="addr"><strong>Gasthaus Lindenblick</strong><br>Musterstraße 12 · 66000 Musterstadt<br>Telefon 06831 000 000</address>
+          <svg class="map" viewBox="0 0 400 220" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round"><path stroke-width="12" d="M-10 160 150 122 410 150"/><path stroke-width="7" d="M150 122 182 -10M252 133 290 230M62 143 34 230"/><path stroke-width="3.5" d="M170 40 300 62 410 34M300 62 284 137M98 134 112 52 172 32M20 60 108 78"/></g><circle class="pin-ring" cx="214" cy="98" r="22"/><circle class="pin" cx="214" cy="98" r="8"/></svg>
+        </div>
+        <form id="reservieren" class="card-form" data-demo-form novalidate aria-labelledby="res-title">
+          <h3 id="res-title">Tisch reservieren</h3>
+          <div class="f"><label for="r-name">Name</label><input id="r-name" type="text" autocomplete="name"></div>
+          <div class="f"><label for="r-tel">Telefon</label><input id="r-tel" type="tel" autocomplete="tel"></div>
+          <div class="f-row">
+            <div class="f"><label for="r-tag">Datum</label><input id="r-tag" type="date"></div>
+            <div class="f"><label for="r-zeit">Uhrzeit</label><select id="r-zeit"><option>12:00</option><option>13:00</option><option>18:00</option><option selected>19:00</option><option>20:00</option></select></div>
+          </div>
+          <div class="f"><label for="r-pers">Personen</label><select id="r-pers"><option>2 Personen</option><option>3 Personen</option><option>4 Personen</option><option>5 bis 8 Personen</option><option>Mehr als 8 Personen</option></select></div>
+          <button class="btn" type="submit">Reservierung anfragen</button>
+          <p class="form-note" role="status">Wir bestätigen Ihre Reservierung telefonisch.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p class="brand">Lindenblick <small>Gasthaus</small></p>
+      <p>Musterstraße 12 · 66000 Musterstadt · Telefon 06831 000 000</p>
+      <p class="foot-links"><span>Impressum</span><span>Datenschutz</span><span>Barrierefreiheit</span></p>
+      <p class="foot-demo">Diese Seite ist ein Beispiel von <a href="index.html">Saarflow</a>. Betrieb, Adresse, Telefonnummer, Preise und Bewertungen sind frei erfunden. <a href="demos.html">Zurück zu den Demos</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/demo.js?v=25" defer></script>
+</body>
+</html>

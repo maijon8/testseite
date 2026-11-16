@@ -10,13 +10,16 @@ Auf der Seite sind verbleibende Platzhalter orange-gestrichelt markiert (`<mark 
 | Vertrauen | Echte Kundenstimmen und Logos ergänzen, sobald vorhanden |
 | Gründer | Fotos ersetzen später die Initialen DS / JM |
 
-## Demos (`demos.html`)
+## Demos (`demos.html` und `demo-*.html`)
 | Bereich | Offen |
 |---|---|
-| Vier Beispielseiten | Alle Betriebe sind frei erfunden (Gasthaus Lindenblick, Schreinerei Brandt, Kfz-Meisterbetrieb Kessler, Salon Nora) und auf der Seite so gekennzeichnet |
-| Bilder | Die Beispiele sind in HTML/CSS gezeichnet, ohne Fotos; später durch Screenshots echter Kundenprojekte ersetzen oder ergänzen |
-| Funktionen | Prüfen, ob alles Gezeigte wirklich angeboten wird: Terminanfrage per Formular, Google-Bewertungen (laut Paketen nur Premium), Hinweisleiste |
-| Paket-Zuordnung | Restaurant und Salon stehen als „Paket Premium“, Schreinerei und Werkstatt als „Paket Standard“ – bei Bedarf anpassen |
+| Vier Beispielseiten | Alle Betriebe sind frei erfunden (Gasthaus Lindenblick, Schreinerei Brandt, Kfz-Meisterbetrieb Kessler, Salon Nora). Das steht in der Leiste oben und im Footer jeder Beispielseite |
+| Adressen, Telefon, Preise, Bewertungen | Auf den Beispielseiten erfunden („Musterstadt“, 06831 000 000); die Speisekarten- und Salonpreise sind nur Beispielinhalt |
+| Formulare | Die Formulare der Beispielseiten senden nichts, sie zeigen nur einen Hinweis |
+| Impressum / Datenschutz | Im Footer der Beispielseiten nur als Text, nicht verlinkt |
+| Bilder | Die Beispielseiten nutzen Zeichnungen statt Fotos; später echte Kundenprojekte zeigen |
+| Funktionen | Prüfen, ob alles Gezeigte wirklich angeboten wird: Anfrageformulare, Google-Bewertungen (laut Paketen nur Premium), Hinweisleiste, Anfahrtskarte |
+| Vorschaubilder | `assets/img/demos/*.webp` sind Screenshots der Beispielseiten und müssen nach Änderungen neu erzeugt werden |
 | Namen | Vor dem Livegang kurz prüfen, ob es einen gleichnamigen Betrieb in der Region gibt |
 
 ## Vor dem echten Betrieb

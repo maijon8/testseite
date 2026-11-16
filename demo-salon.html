@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Salon Nora – Beispiel-Website von Saarflow</title>
+  <meta name="description" content="Beispiel-Website von Saarflow für einen Friseursalon: Leistungen und Preise, Team, Öffnungszeiten und Terminanfrage. Der Betrieb ist frei erfunden.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#F6ECE6">
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/demo-sites.css?v=25">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="t-salon" id="top">
+  <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- Hinweisleiste von Saarflow: gehört nicht zur Beispielseite -->
+  <aside class="demo-bar" aria-label="Hinweis von Saarflow">
+    <div class="demo-bar-in">
+      <p><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 22c6 0 6-12 13-12s7 12 13 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><strong>Beispiel-Website von Saarflow</strong> <span>Betrieb frei erfunden</span></p>
+      <p><a href="demos.html"><span aria-hidden="true">←</span> Alle Demos</a> <a class="demo-bar-cta" href="demos.html?beispiel=Friseursalon#kontakt"><span class="sm">Unverbindlich anfragen</span><span class="lg">So eine Website unverbindlich anfragen</span></a></p>
+    </div>
+  </aside>
+
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="#top">Salon Nora</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav"><span aria-hidden="true"></span><span class="vh">Menü</span></button>
+      <nav id="nav" class="nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#stimmen">Stimmen</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <a class="btn btn--small" href="#kontakt">Termin anfragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhalt">
+    <section aria-labelledby="hero-title">
+      <div class="wrap s-hero-grid">
+        <div class="s-shape s-shape--l" aria-hidden="true"><svg viewBox="0 0 120 160" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="38" cy="128" r="16"/><circle cx="82" cy="128" r="16"/><path d="M45 113 86 22M75 113 34 22"/></svg></div>
+        <div class="s-hero-copy">
+          <p class="kicker">Damen · Herren · Kinder</p>
+          <h1 id="hero-title">Zeit für einen neuen Schnitt.</h1>
+          <p class="lead">Schneiden, Farbe und Styling in entspannter Atmosphäre. Termine nach Vereinbarung – donnerstags auch abends.</p>
+          <p class="actions"><a class="btn" href="#kontakt">Termin anfragen</a></p>
+        </div>
+        <div class="s-shape s-shape--r" aria-hidden="true"><svg viewBox="0 0 120 120" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 34h84v22H18zM28 56v34M39 56v34M50 56v34M61 56v34M72 56v34M83 56v34M94 56v34"/></svg></div>
+      </div>
+    </section>
+
+    <section id="leistungen" class="sec s-white" aria-labelledby="leistungen-title">
+      <div class="wrap">
+        <div class="sec-head s-center">
+          <p class="kicker">Leistungen und Preise</p>
+          <h2 id="leistungen-title">Was wir für Sie tun.</h2>
+        </div>
+        <div class="s-prices">
+          <div>
+            <h3>Damen</h3>
+            <ul>
+              <li><span>Waschen, Schneiden, Föhnen</span><span>ab 42&nbsp;€</span></li>
+              <li><span>Schneiden</span><span>ab 28&nbsp;€</span></li>
+              <li><span>Föhnen und Styling</span><span>ab 24&nbsp;€</span></li>
+              <li><span>Hochsteckfrisur</span><span>ab 55&nbsp;€</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Herren und Kinder</h3>
+            <ul>
+              <li><span>Herrenschnitt</span><span>ab 24&nbsp;€</span></li>
+              <li><span>Maschinenschnitt</span><span>ab 15&nbsp;€</span></li>
+              <li><span>Bartpflege</span><span>ab 12&nbsp;€</span></li>
+              <li><span>Kinderschnitt bis 12 Jahre</span><span>ab 14&nbsp;€</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Farbe</h3>
+            <ul>
+              <li><span>Ansatzfarbe</span><span>ab 39&nbsp;€</span></li>
+              <li><span>Komplettfarbe</span><span>ab 52&nbsp;€</span></li>
+              <li><span>Strähnen</span><span>ab 60&nbsp;€</span></li>
+              <li><span>Tönung</span><span>ab 32&nbsp;€</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="s-note">Der genaue Preis richtet sich nach Haarlänge und Aufwand. Wir sagen ihn vor dem Start.</p>
+      </div>
+    </section>
+
+    <section id="team" class="sec" aria-labelledby="team-title">
+      <div class="wrap">
+        <div class="sec-head s-center">
+          <p class="kicker">Team</p>
+          <h2 id="team-title">Wer Ihnen die Haare schneidet.</h2>
+        </div>
+        <ul class="s-team">
+          <li><div class="s-avatar" aria-hidden="true">N</div><h3>Nora Klein</h3><p class="s-role">Inhaberin · Friseurmeisterin</p><p>Seit 2014 im eigenen Salon. Am liebsten: Schnitte, die auch ungeföhnt sitzen.</p></li>
+          <li><div class="s-avatar" aria-hidden="true">L</div><h3>Lea Sommer</h3><p class="s-role">Friseurin · Farbe</p><p>Für Strähnen, Balayage und alles, was Geduld braucht.</p></li>
+          <li><div class="s-avatar" aria-hidden="true">T</div><h3>Tim Weber</h3><p class="s-role">Friseur · Herren und Bart</p><p>Klassisch oder modern – und der Bart gleich mit.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="stimmen" class="sec s-berry s-quote" aria-label="Kundenstimme">
+      <div class="wrap">
+        <blockquote>
+          <p>„Endlich ein Salon, bei dem ich mich auf den Termin freue.“</p>
+          <footer>Beispiel-Bewertung · Google</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="kontakt" class="sec s-white" aria-labelledby="kontakt-title">
+      <div class="wrap s-contact-grid">
+        <div>
+          <p class="kicker">Kontakt und Öffnungszeiten</p>
+          <h2 id="kontakt-title">Wann dürfen wir Sie begrüßen?</h2>
+          <dl class="hours">
+            <div><dt>Dienstag – Freitag</dt><dd>09:00 – 18:00</dd></div>
+            <div><dt>Donnerstag</dt><dd>bis 20:00</dd></div>
+            <div><dt>Samstag</dt><dd>08:00 – 14:00</dd></div>
+            <div><dt>Sonntag, Montag</dt><dd>geschlossen</dd></div>
+          </dl>
+          <address class="addr"><strong>Salon Nora</strong><br>Mustergasse 3 · 66000 Musterstadt<br>Telefon 06831 000 000</address>
+        </div>
+        <form class="card-form" data-demo-form novalidate aria-labelledby="form-title">
+          <h3 id="form-title">Termin anfragen</h3>
+          <div class="f"><label for="s-name">Name</label><input id="s-name" type="text" autocomplete="name"></div>
+          <div class="f"><label for="s-tel">Telefon</label><input id="s-tel" type="tel" autocomplete="tel"></div>
+          <div class="f"><label for="s-was">Wunschleistung</label><select id="s-was"><option>Waschen, Schneiden, Föhnen</option><option>Herrenschnitt</option><option>Farbe oder Strähnen</option><option>Hochsteckfrisur</option><option>Etwas anderes</option></select></div>
+          <div class="f"><label for="s-wann">Wunschtermin</label><input id="s-wann" type="text" placeholder="z. B. Donnerstag ab 17 Uhr"></div>
+          <button class="btn" type="submit">Termin anfragen</button>
+          <p class="form-note" role="status">Wir rufen zurück und bestätigen Ihren Termin.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p class="brand">Salon Nora</p>
+      <p>Mustergasse 3 · 66000 Musterstadt · Telefon 06831 000 000</p>
+      <p class="foot-links"><span>Impressum</span><span>Datenschutz</span><span>Barrierefreiheit</span></p>
+      <p class="foot-demo">Diese Seite ist ein Beispiel von <a href="index.html">Saarflow</a>. Betrieb, Adresse, Telefonnummer, Preise und Bewertungen sind frei erfunden. <a href="demos.html">Zurück zu den Demos</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/demo.js?v=25" defer></script>
+</body>
+</html>

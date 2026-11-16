@@ -53,6 +53,14 @@
     });
   });
 
+  // Kommt jemand von einer Beispielseite (?beispiel=Restaurant), ist das Beispiel schon gewählt
+  try {
+    var wanted = new URLSearchParams(window.location.search).get('beispiel');
+    if (wanted && paketSelect) {
+      Array.prototype.forEach.call(paketSelect.options, function (o) { if (o.value === wanted) paketSelect.value = wanted; });
+    }
+  } catch (e) {}
+
   function fallbackCopy(text) {
     var ta = document.createElement('textarea');
     ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';

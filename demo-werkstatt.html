@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kfz-Meisterbetrieb Kessler – Beispiel-Website von Saarflow</title>
+  <meta name="description" content="Beispiel-Website von Saarflow für eine Kfz-Werkstatt: Terminanfrage, Leistungen, Ablauf und Anfahrt. Der Betrieb ist frei erfunden.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#13171C">
+  <link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/demo-sites.css?v=25">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="t-kfz" id="top">
+  <a class="skip" href="#inhalt">Zum Inhalt springen</a>
+
+  <!-- Hinweisleiste von Saarflow: gehört nicht zur Beispielseite -->
+  <aside class="demo-bar" aria-label="Hinweis von Saarflow">
+    <div class="demo-bar-in">
+      <p><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M3 22c6 0 6-12 13-12s7 12 13 12" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg><strong>Beispiel-Website von Saarflow</strong> <span>Betrieb frei erfunden</span></p>
+      <p><a href="demos.html"><span aria-hidden="true">←</span> Alle Demos</a> <a class="demo-bar-cta" href="demos.html?beispiel=Kfz-Werkstatt#kontakt"><span class="sm">Unverbindlich anfragen</span><span class="lg">So eine Website unverbindlich anfragen</span></a></p>
+    </div>
+  </aside>
+
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="#top">Kessler <small>Kfz-Meisterbetrieb</small></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav"><span aria-hidden="true"></span><span class="vh">Menü</span></button>
+      <nav id="nav" class="nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#leistungen">Leistungen</a></li>
+          <li><a href="#ablauf">Ablauf</a></li>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#anfahrt">Anfahrt</a></li>
+        </ul>
+        <a class="btn btn--small" href="#termin">Termin anfragen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inhalt">
+    <div class="k-notice"><p class="wrap">Heute geöffnet bis 18:00 Uhr · HU/AU jeden Dienstag und Donnerstag im Haus</p></div>
+
+    <section class="k-hero" aria-labelledby="hero-title">
+      <svg class="k-wheel" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="100" cy="100" r="98"/><circle cx="100" cy="100" r="70"/><circle cx="100" cy="100" r="16"/><path d="M100 30v54M100 116v54M30 100h54M116 100h54M50.5 50.5l38.2 38.2M111.3 111.3l38.2 38.2M149.5 50.5l-38.2 38.2M88.7 111.3l-38.2 38.2"/></svg>
+      <div class="wrap k-hero-grid">
+        <div class="k-hero-copy">
+          <p class="kicker">Freie Werkstatt · alle Marken</p>
+          <h1 id="hero-title">Inspektion, Reifen, HU/AU. Alles aus einer Hand.</h1>
+          <p class="lead">Sie bringen Ihr Auto morgens vorbei, wir rufen an, sobald es fertig ist. Einen Ersatzwagen gibt es auf Wunsch.</p>
+          <ul class="k-tags" aria-label="Häufige Leistungen"><li>Inspektion</li><li>Reifenservice</li><li>HU/AU</li><li>Klimaservice</li></ul>
+        </div>
+        <form id="termin" class="card-form" data-demo-form novalidate aria-labelledby="termin-title">
+          <h2 id="termin-title">Termin anfragen</h2>
+          <div class="f"><label for="k-auto">Fahrzeug</label><input id="k-auto" type="text" placeholder="z. B. Kleinwagen, Baujahr 2018"></div>
+          <div class="f"><label for="k-was">Anliegen</label><select id="k-was"><option>Inspektion mit Ölwechsel</option><option>HU/AU</option><option>Reifenwechsel</option><option>Bremsen</option><option>Klimaservice</option><option>Etwas anderes</option></select></div>
+          <div class="f-row">
+            <div class="f"><label for="k-tag">Wunschtermin</label><input id="k-tag" type="text" placeholder="z. B. Dienstag"></div>
+            <div class="f"><label for="k-tel">Telefon</label><input id="k-tel" type="tel" autocomplete="tel"></div>
+          </div>
+          <button class="btn" type="submit">Anfrage senden</button>
+          <p class="form-note" role="status">Wir melden uns am selben Werktag.</p>
+        </form>
+      </div>
+    </section>
+
+    <section id="leistungen" class="sec k-light" aria-labelledby="leistungen-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">Leistungen</p>
+          <h2 id="leistungen-title">Was wir für Ihr Auto tun.</h2>
+        </div>
+        <ul class="k-services">
+          <li><h3>Inspektion</h3><p>Nach Herstellervorgaben, mit Eintrag ins Serviceheft.</p></li>
+          <li><h3>HU und AU</h3><p>Dienstags und donnerstags direkt bei uns im Haus.</p></li>
+          <li><h3>Reifenservice</h3><p>Wechsel, Wuchten und Einlagerung Ihrer Räder.</p></li>
+          <li><h3>Bremsen und Fahrwerk</h3><p>Prüfung, Reparatur und Achsvermessung.</p></li>
+          <li><h3>Klimaservice</h3><p>Wartung, Desinfektion und Befüllung der Anlage.</p></li>
+          <li><h3>Unfallinstandsetzung</h3><p>Karosserie, Lack und Abwicklung mit der Versicherung.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="ablauf" class="sec" aria-labelledby="ablauf-title">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker">Ablauf</p>
+          <h2 id="ablauf-title">Drei Schritte, dann läuft er wieder.</h2>
+        </div>
+        <ol class="k-steps">
+          <li><h3>Termin anfragen</h3><p>Per Formular oder Telefon. Wir bestätigen noch am selben Werktag.</p></li>
+          <li><h3>Auto bringen</h3><p>Auch vor Öffnung: Der Schlüssel kommt einfach in den Einwurf.</p></li>
+          <li><h3>Abholen</h3><p>Wir rufen an, sobald Ihr Auto fertig ist, und erklären, was gemacht wurde.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="ueber-uns" class="sec k-light" aria-labelledby="ueber-title">
+      <div class="wrap k-about-grid">
+        <div>
+          <p class="kicker">Über uns</p>
+          <h2 id="ueber-title">Meisterbetrieb seit 1998.</h2>
+          <p>Michael Kessler hat die Werkstatt vor über 25 Jahren gegründet. Heute arbeitet er mit seinem Sohn und vier Mitarbeitern – an Autos aller Marken und jeden Alters.</p>
+          <p>Bevor wir etwas reparieren, sagen wir Ihnen, was es kostet. Und wenn sich eine Reparatur nicht mehr lohnt, sagen wir das auch.</p>
+        </div>
+        <ul class="k-stats">
+          <li><b>4</b> Hebebühnen</li>
+          <li><b>6</b> Leute im Team</li>
+          <li><b>25</b> Jahre Erfahrung</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="anfahrt" class="sec" aria-labelledby="anfahrt-title">
+      <div class="wrap k-visit-grid">
+        <div>
+          <p class="kicker">Anfahrt und Öffnungszeiten</p>
+          <h2 id="anfahrt-title">Hier finden Sie uns.</h2>
+          <dl class="hours">
+            <div><dt>Montag – Freitag</dt><dd>07:30 – 18:00</dd></div>
+            <div><dt>Samstag</dt><dd>09:00 – 13:00</dd></div>
+          </dl>
+          <address class="addr"><strong>Kfz-Meisterbetrieb Kessler</strong><br>Im Mustergewerbepark 8 · 66000 Musterstadt<br>Telefon 06831 000 000</address>
+        </div>
+        <svg class="map" viewBox="0 0 400 220" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round"><path stroke-width="12" d="M-10 160 150 122 410 150"/><path stroke-width="7" d="M150 122 182 -10M252 133 290 230M62 143 34 230"/><path stroke-width="3.5" d="M170 40 300 62 410 34M300 62 284 137M98 134 112 52 172 32M20 60 108 78"/></g><circle class="pin-ring" cx="214" cy="98" r="22"/><circle class="pin" cx="214" cy="98" r="8"/></svg>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <p class="brand">Kessler <small>Kfz-Meisterbetrieb</small></p>
+      <p>Im Mustergewerbepark 8 · 66000 Musterstadt · Telefon 06831 000 000</p>
+      <p class="foot-links"><span>Impressum</span><span>Datenschutz</span><span>Barrierefreiheit</span></p>
+      <p class="foot-demo">Diese Seite ist ein Beispiel von <a href="index.html">Saarflow</a>. Betrieb, Adresse, Telefonnummer, Preise und Bewertungen sind frei erfunden. <a href="demos.html">Zurück zu den Demos</a></p>
+    </div>
+  </footer>
+
+  <script src="assets/js/demo.js?v=25" defer></script>
+</body>
+</html>
